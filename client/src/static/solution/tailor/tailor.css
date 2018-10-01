@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.container img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 80%;
+}
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+    color: orange;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}

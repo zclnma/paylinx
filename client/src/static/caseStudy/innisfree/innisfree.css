@@ -1,0 +1,48 @@
+.container {
+    text-align: center;
+    display: flex;
+}
+
+.container img{
+    width: 50%;
+    max-width: 50%;
+}
+
+.content {
+    padding-top: 30px;
+    width:50%;
+}
+
+.sec {
+    width:80%;
+    margin:auto;
+    text-align: left;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+}
+
+.sec img{
+    position: absolute;
+    top:0;
+    left:0;
+    max-width: 10%;
+}
+
+.orange {
+    margin:auto;
+    border: 3px solid orange;
+    width: 50px;
+}
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}

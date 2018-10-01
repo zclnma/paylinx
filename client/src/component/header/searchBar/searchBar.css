@@ -1,0 +1,14 @@
+.searchContainer {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+    font-weight: 600;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}

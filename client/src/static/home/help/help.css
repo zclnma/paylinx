@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container1 {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logoContainer {
+    margin: auto;
+    margin-bottom: 50px; 
+    padding: auto;
+    width: 400px;
+}
+
+.logoContainer img{
+    max-width: 150px;
+    margin-left: 40px;  
+}
+
+.solutions {
+    margin: auto;
+    margin-top: 50px; 
+    padding: auto;
+    width:100%;
+    display: flex;
+}
+
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}

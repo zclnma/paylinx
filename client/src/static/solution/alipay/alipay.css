@@ -1,0 +1,34 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container img{
+    max-width: 150px;  
+}
+
+.ali img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 80%;
+}
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+    color: orange;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}
+
+.Latoh31 {
+    composes: Latoh3 from global;
+    color: orange;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}

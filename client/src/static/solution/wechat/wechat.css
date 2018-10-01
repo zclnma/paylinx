@@ -1,0 +1,82 @@
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+.logoContainer {
+    margin: auto;
+    padding: auto;
+    width: 400px;
+}
+
+.logoContainer img{
+    max-width: 80px;
+    margin-left: 20px;  
+}
+
+.contentContainer {
+    margin-top: 100px;
+    display: flex;
+}
+
+.wechatImage {
+    width: 40%;
+    margin: auto;
+}
+
+.wechatImage img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.content {
+    width:50%;
+}
+
+.sec {
+    width:80%;
+    margin:auto;
+    text-align: left;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+}
+
+
+.orange {
+    margin:auto;
+    border: 3px solid orange;
+    width: 50px;
+}
+
+.orangeV {
+    margin: auto;
+    border: 2px solid orange;
+    width: 1px;
+    height: 80%;
+    margin-right: 10px
+}
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+    color: orange;
+}
+
+.Latoh31 {
+    composes: Latoh3 from global;
+    color: orange;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: left
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+    list-style-position: outside;
+}
+

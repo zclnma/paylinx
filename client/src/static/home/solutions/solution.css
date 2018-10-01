@@ -1,0 +1,77 @@
+.container1 {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logoContainer {
+    margin: auto;
+    margin-bottom: 50px; 
+    padding: auto;
+    width: 400px;
+}
+
+.logoContainer img{
+    max-width: 80px;
+    margin-left: 20px;  
+}
+
+.solutions {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px; 
+    width:100%;
+}
+.solution {
+    width: 40%;
+    margin: auto;
+    position: relative;
+}
+
+.solution img{
+    height: 350px;
+    max-width: 100%;
+    margin:auto;
+    background: #F8F8F8;
+    box-shadow: 0 2px 5px 1px rgba(0,0,0,0.20), inset 0 -4px 16px 3px rgba(0,0,0,0.17);
+}
+
+.solution:hover .image{
+    filter: blur(4px);
+}
+
+.shadow {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    top: 5%; 
+    background: rgba(244,244,244,0.55);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.shadow img {
+    margin-top: 70px;
+    max-width: 60px;
+    height: auto;
+}
+
+.modalContainer {
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}

@@ -1,0 +1,48 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container1 {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logoContainer {
+    margin: auto;
+    margin-bottom: 50px; 
+    padding: auto;
+    width: 400px;
+}
+
+.logoContainer img{
+    max-width: 80px;
+    margin-left: 20px;  
+}
+
+.solutions {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px; 
+    width:100%;
+}
+.solutions img{
+    height: 350px;
+    max-width: 40%;
+    margin:auto;
+    background: #F8F8F8;
+    box-shadow: 0 2px 5px 1px rgba(0,0,0,0.20), inset 0 -4px 16px 3px rgba(0,0,0,0.17);
+}
+
+.Latoh2 {
+    composes: Latoh2 from global;
+}
+
+.Latoh3 {
+    composes: Latoh3 from global;
+}
+
+.SourceB {
+    composes: Sourcebody from global;
+}

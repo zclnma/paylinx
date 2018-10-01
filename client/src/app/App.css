@@ -1,0 +1,21 @@
+:global(.Latoh1) {
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+} 
+:global(.Latoh2) {
+  font-family: 'Lato';
+  font-weight: medium;
+  font-size: 2rem;
+} 
+:global(.Latoh3) {
+  font-family: 'Lato';
+  font-weight: normal;
+  font-size: 1rem;
+} 
+:global(.Sourcebody) {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+} 
