@@ -11,11 +11,11 @@
 
 .bannerInfo {
     text-align: left;
-    width: 350px;
+    width: 250px;
     height: 200px;
     position: absolute;
-    left: 10%;
-    bottom: 15%;
+    left: 75px;
+    top: 200px;
 }
 
 .orange {
@@ -23,11 +23,7 @@
     width: 50px;
 }
 
-.Latoh1 {
-    composes: Latoh1 from global;
-}
-
-.SourceB {
-    composes: Sourcebody from global;
+.body {
+    composes: body from global;
     color: white;
 }

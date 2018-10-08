@@ -1,7 +1,7 @@
 import React from 'react';
 import { Collapse, Input } from 'antd';
 import FAQfiles from './FAQ';
-import style from './searchBar.css';
+import './searchBar.css';
 
 const Panel = Collapse.Panel;
 const Search = Input.Search;
@@ -13,19 +13,15 @@ export default () => {
             {FAQfile.questions.map( (question, innerIndex) => {
                 return (
                     <div key={innerIndex}>
-                        <div className={style.Latoh3}>{question.question}</div>
-                        <div className={style.SourceB}>{question.answer}</div>
+                        <div styleName="Latoh3">{question.question}</div>
+                        <div styleName="SourceB">{question.answer}</div>
                     </div>
                 )
             })}
         </Panel>
     })
   return (
-    <div className={style.searchContainer}>
-        <Search
-        placeholder="input search text"
-        onSearch={value => console.log(value)}
-        style={{ width: '100%' }}/>
+    <div styleName="searchContainer">
         <Collapse accordion style={{width:'100%'}}>
             {faq}
         </Collapse>

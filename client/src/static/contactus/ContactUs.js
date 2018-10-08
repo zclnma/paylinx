@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './ContactUs.css';
+import './ContactUs.css';
 import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
 import Banner from './banner/banner';
@@ -15,16 +15,13 @@ export default () => {
       <Layout>
         <Header />
         <Content >
-          <div className={style.container}>
           <Banner />
-          <Card
-            bordered={false}
-            style={{ width: '600px', margin: 'auto' }}>
+          <div styleName="form">
+            <div style={{textAlign: 'center', marginTop:'30px'}} styleName="lato-title">GET IN TOUCH</div>
             <Form />
-          </Card>
           </div>
           <Map />
-          <Download />
+          {/*<Download />*/}
         </Content>
         <Footer />
       </Layout>

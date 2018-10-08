@@ -1,84 +1,160 @@
 import React, { Component } from 'react'
-import style from './footer.css';
-import {Link} from 'react-router-dom';
-import {Icon, Popover} from 'antd';
+import {Popover} from 'antd';
+import {NavHashLink as Link} from 'react-router-hash-link';
+
 import MenuList from '../menus';
 import wechatQR from './images/wechatQR.png';
+import wechat from './images/icon_socialMedia-07.png';
+import facebook from './images/icon_socialMedia-08.png';
+import ins from './images/icon_socialMedia-09.png';
+import twitter from './images/icon_socialMedia-10.png';
+import linkedin from './images/icon_socialMedia-11.png';
+
+import './footer.css';
+
 export default class footer extends Component {
+
+    scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
+
   render() {
 
-    let content = <div className={style.wechatQR}>
+    let content = <div styleName="wechatQR">
         <img src={wechatQR} alt=""/>
     </div>
     return (
-      <div className={style.footer}>
-        <div className={style.container}>
-            <div className={style.section}>
-                <div className={style.number}>
-                    <h5>CUSTOMER SERVICE HOTLINE</h5>
-                    <h2>1300 03 12 83</h2>
+      <div styleName="footer">
+        <div styleName="container">
+            <div styleName="section-top">
+                <div styleName="contact">
+                    <div styleName="lato-subtitle">CUSTOMER SERVICE HOTLINE</div>
+                    <div styleName="lato-oversize">1300 03 12 83</div>
                 </div>
-                <div className={style.follow}>
-                    <h5>FOLLOW US ON</h5>
-                        <a href='https://www.facebook.com/paylinx/'><Icon className={style.icon} style={{bottom: '-30px',left: '12px'}}type="facebook" theme="outlined" /></a>
+                <div styleName="follow">
+                    <div className="lato-subtitle">FOLLOW US ON</div>
+                    <div styleName="icons">
+                        <a href='https://www.facebook.com/paylinx/'><img src={facebook} alt="" /></a>
                         <Popover content={content}>
-                            <Icon className={style.icon} style={{cursor: 'pointer', bottom: '-30px',left: '49px'}} type="wechat" theme="outlined" />  
+                            <img src={wechat} alt="" />
                         </Popover>                        
-                        <a href='https://twitter.com/marketpaylinx?lang=en'><Icon className={style.icon} style={{bottom: '-30px',left: '86px'}}type="twitter" theme="outlined" /></a>
-                        <a href='https://www.instagram.com/paylinxau/?hl=en'><Icon className={style.icon}style={{bottom: '-30px',left: '123px'}}type="instagram" theme="outlined" /></a>
-                        <a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/'><Icon className={style.icon} style={{bottom: '-30px',left: '160px'}}type="linkedin" theme="outlined" /></a>
+                        <a href='https://twitter.com/marketpaylinx?lang=en'><img src={twitter} alt="" /></a>
+                        <a href='https://www.instagram.com/paylinxau/?hl=en'><img src={ins} alt="" /></a>
+                        <a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/'><img src={linkedin} alt="" /></a>
                     </div>
+                </div>
             </div>
             <hr style={{color: '#a0a0a0'}}/>
-            <div className={style.section}>
-                <div className={style.menu}>
-                    <h5>{MenuList.aboutUs.title}</h5>
+            <div styleName="section-bottom">
+                <div styleName="menu">
+                    <Link 
+                        to={MenuList.aboutUs.link}
+                        styleName="link"
+                        className="lato-subtitle"
+                        onClick={this.scrollToTop}>
+                            {MenuList.aboutUs.title}
+                    </Link>
                     <ul>
                         {MenuList.aboutUs.menu.map((me,index) => {
-                            return <li key={index}>{me.value}</li>
+                            return <li key={index}>
+                                    <Link
+                                    to={[MenuList.aboutUs.link, me.htag].join('')} 
+                                    styleName="link"
+                                    className="lato-ssubtitle">
+                                        {me.value}
+                                    </Link>
+                                </li>
                         })}
                     </ul>
                 </div>
-
-                <div className={style.menu}>
-                    <h5>ABOUT US</h5>
+                <div styleName="menu">
+                    <Link 
+                        to={MenuList.solution.link}
+                        styleName="link"
+                        className="lato-subtitle"
+                        onClick={this.scrollToTop}>
+                            {MenuList.solution.title}
+                    </Link>
                     <ul>
-                        <li>Industries we serve</li>
-                        <li>Our story</li>
-                        <li>Our values</li>
+                        {MenuList.solution.menu.map((me,index) => {
+                            return <li key={index}>
+                                <Link
+                                    to={[MenuList.solution.link, me.htag].join('')} 
+                                    styleName="link"
+                                    className="lato-ssubtitle">
+                                    {me.value}
+                                    </Link>
+                                </li>
+                        })}
                     </ul>
                 </div>
-                <div className={style.menu}>
-                    <h5>SOLUTIONS</h5>
+                <div styleName="menu">
+                    <Link 
+                        to={MenuList.contactUs.link}
+                        styleName="link"
+                        className="lato-subtitle"
+                        onClick={this.scrollToTop}>
+                            {MenuList.contactUs.title}
+                    </Link>
                     <ul>
-                        <li>WeChat Pay</li>
-                        <li>AliPay</li>
-                        <li>Talior made stragegies</li>
+                        {MenuList.contactUs.menu.map((me,index) => {
+                            return <li key={index}>
+                            <Link 
+                                to={[MenuList.contactUs.link, me.htag].join('')} 
+                                styleName="link"
+                                className="lato-ssubtitle">
+                                {me.value}
+                                </Link>
+                            </li>
+                        })}
                     </ul>
                 </div>
-                <div className={style.menu} >
-                    <h5>CASE STUDIES</h5>
+                <div styleName="menu">
+                    <Link 
+                        to={MenuList.caseStudy.link}
+                        styleName="link"
+                        className="lato-subtitle"
+                        onClick={this.scrollToTop}>
+                            {MenuList.caseStudy.title}
+                    </Link>
                     <ul>
-                        <li>Case studies</li>
-                        <li>Testimonies</li>
+                        {MenuList.caseStudy.menu.map((me,index) => {
+                            return <li key={index}>
+                            <Link 
+                                to={[MenuList.caseStudy.link, me.htag].join('')} 
+                                styleName="link"
+                                className="lato-ssubtitle">
+                                {me.value}
+                                </Link>
+                            </li>
+                        })}
                     </ul>
                 </div>
-                <div className={style.menu}>
-                    <h5>CONTACT US</h5>
+                <div styleName="menu">
+                    <Link 
+                        to={MenuList.login.link}
+                        styleName="link"
+                        className="lato-subtitle"
+                        onClick={this.scrollToTop}>
+                            {MenuList.login.title}
+                    </Link>
                     <ul>
-                        <li>Enquire form</li>
-                        <li>Our location</li>
-                        <li>Download our App</li>
+                        {MenuList.login.menu.map((me,index) => {
+                            return <li key={index}>
+                            <Link
+                                to={[MenuList.login.link, me.htag].join('')} 
+                                styleName="link"
+                                className="lato-ssubtitle">
+                                {me.value}
+                                </Link>
+                            </li>
+                        })}
                     </ul>
                 </div>
-                <div className={style.menu}>
-                    <h5>LOGIN</h5>
-                    <ul>
-                        <li>Merchant login</li>
-                        <li>Agency login</li>
-                        <li>API document</li>
-                    </ul>
-                </div>
+            </div>
+            <div styleName="disclaimer">
+                <div styleName="link"
+                     className="lato-ssubtitle">Disclimer|Privacy Policy|Sitemap</div>
             </div>
         </div>
       </div>

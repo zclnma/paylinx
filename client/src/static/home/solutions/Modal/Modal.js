@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import classes from './Modal.css';
+import './Modal.css';
 import Backdrop from './Backdrop/Backdrop';
 
 const modal = (props) =>(
@@ -8,7 +8,7 @@ const modal = (props) =>(
     show={props.show}
     clicked={props.modalClosed}/>
     <div
-      className={classes.Modal}
+      styleName="Modal"
       style={{
         transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
         opacity:  props.show ? '1' : '0'

@@ -1,31 +1,38 @@
 'use strict';
 
-const autoprefixer = require('autoprefixer');  
-const path = require('path');  
-const webpack = require('webpack');  
-const HtmlWebpackPlugin = require('html-webpack-plugin');  
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');  
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');  
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');  
-const eslintFormatter = require('react-dev-utils/eslintFormatter');  
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');  
-const getClientEnvironment = require('./env');  
+const autoprefixer = require('autoprefixer');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
+const eslintFormatter = require('react-dev-utils/eslintFormatter');
+const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
+const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const postcssAspectRatioMini = require('postcss-aspect-ratio-mini');
+const postcssPxToViewport = require('postcss-px-to-viewport');
+const postcssWriteSvg = require('postcss-write-svg');
+const postcssCssnext = require('postcss-cssnext');
+const postcssViewportUnits = require('postcss-viewport-units');
+const cssnano = require('cssnano');
+const postcssIcssValues = require('postcss-icss-values');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
-const publicPath = '/';  
+const publicPath = '/';
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
 // Omit trailing slash as %PUBLIC_PATH%/xyz looks better than %PUBLIC_PATH%xyz.
-const publicUrl = '';  
+const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
 
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
-module.exports = {  
+module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
   devtool: 'cheap-module-source-map',
@@ -84,7 +91,7 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-
+      
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -115,7 +122,7 @@ module.exports = {
             options: {
               formatter: eslintFormatter,
               eslintPath: require.resolve('eslint'),
-
+              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -144,10 +151,25 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              plugins: [["import", {
-                "libraryName": "antd",
-                "style": "css"
-              }]],
+              plugins: [
+                // Allow syntax import {sth} from 'antd'
+                ["import", {"libraryName": "antd", "style": "css"}],
+                
+                // Css module with babel plugin
+                // Eg: import './*.css'
+                // <div styleName="Sth"> Hello World</div>
+                [
+                  'react-css-modules',
+                  {
+                    generateScopedName: '[name]_[local]_[hash:base64:5]',
+                    filetypes: {
+                      '.scss': {
+                        syntax: 'postcss-scss'
+                      }
+                    }
+                  }
+                ]
+              ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
@@ -167,8 +189,9 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
+                  importLoaders: 1,
                   modules: true,
-                  // importLoaders: 1,
+                  localIdentName: '[name]_[local]_[hash:base64:5]'
                 },
               },
               {
@@ -176,21 +199,40 @@ module.exports = {
                 options: {
                   // Necessary for external CSS imports to work
                   // https://github.com/facebookincubator/create-react-app/issues/2677
-                  modules: true,
                   ident: 'postcss',
                   plugins: () => [
-                    //require('postcss-cssnext'),
                     require('postcss-flexbugs-fixes'),
-                    //require('postcss-nested'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ],
-                      flexbox: 'no-2009',
+                    // Autoprefixer already included in Cssnext({})
+                    // autoprefixer({
+                    //   browsers: [
+                    //     '>1%',
+                    //     'last 4 versions',
+                    //     'Firefox ESR',
+                    //     'not ie < 9', // React doesn't support IE8 anyway
+                    //   ],
+                    //   flexbox: 'no-2009',
+                    // }),
+                    postcssAspectRatioMini({}),
+                    postcssPxToViewport({ 
+                      viewportWidth: 750, // (Number) The width of the viewport. 
+                      viewportHeight: 1334, // (Number) The height of the viewport. 
+                      unitPrecision: 3, // (Number) The decimal numbers to allow the REM units to grow to. 
+                      viewportUnit: 'vw', // (String) Expected units. 
+                      selectorBlackList: ['.ignore', '.hairlines'], // (Array) The selectors to ignore and leave as px. 
+                      minPixelValue: 1, // (Number) Set the minimum pixel value to replace. 
+                      mediaQuery: false // (Boolean) Allow px to be converted in media queries. 
                     }),
+                    postcssWriteSvg({
+                      utf8: false
+                    }),
+                    postcssCssnext({}),
+                    postcssViewportUnits({}),
+                    cssnano({
+                      preset: "advanced", 
+                      autoprefixer: false, 
+                      "postcss-zindex": false 
+                    }),
+                    require('postcss-icss-values'),
                   ],
                 },
               },
@@ -198,7 +240,7 @@ module.exports = {
           },
           {
             test: /\.css$/,
-            exclude: [/src/],
+            include: [/node_modules/],
             use: [
               {
                 loader: "style-loader",
@@ -208,7 +250,7 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                 }
-              }
+              }      
             ]
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
@@ -218,10 +260,10 @@ module.exports = {
           // that fall through the other loaders.
           {
             // Exclude `js` files to keep "css" loader working as it injects
-            // it's runtime that would otherwise processed through "file" loader.
+            // its runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.js$/, /\.html$/, /\.json$/],
+            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',

@@ -1,15 +1,11 @@
 .container {
     text-align: center;
-    padding: 50px;
-    overflow:hidden;
+    padding: 20px;
 }
 
 .container img{
-    margin-top:10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    margin: auto;
+    width: 100px;
 }
 
 .orange {
@@ -18,18 +14,25 @@
     width: 50px;
 }
 
-.Latoh2 {
-    composes: Latoh2 from global;
+.lato-title {
+    composes: lato-title from global;
+    color: black;
 }
 
-.Latoh3 {
-    composes: Latoh3 from global;
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
 }
+.card {
+    position: relative;
+    height: 300px;
+    display: block;
+    width: 30%;
+    margin: auto;
+}   
 
-.SourceB {
-    composes: Sourcebody from global;
-}
-
-.card img{
-    max-width: 140px;
+.service{
+    width: 80%; 
+    margin: auto;
 }

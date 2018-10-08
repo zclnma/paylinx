@@ -1,3 +1,5 @@
+@value sea-buckthron from '../../../app/App.css';
+
 .container {
     position: relative;
     width: 100%;
@@ -11,8 +13,9 @@
     max-height: 100%;
 }
 
+
 .contentContainer {
-    position: absolute;
+    position: relative;
     width: 90%;
     height: 90%;
     left: 5%;
@@ -22,37 +25,65 @@
     overflow: hidden;
 }
 
+.content {
+    position: relative;
+    width: 243px;
+    margin: auto;
+    text-align: justify;   
+}
+
+.content img{
+    margin-top: 20px;
+    width: 137px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.big-logo {
+    margin-top: 172px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 277px;
+    height: 171px;
+}
+
 .orange {
     position: relative;
-    border: 3px solid orange;
-    margin-top: 20%;
-    margin-left: 10%;
-    width: 40px;
+    border-bottom: 3px solid sea-buckthron;
+    margin-top: 45px;
+    margin-left: 50px;
+    width: 14px;
 }
 
 .cards {
     align-items: center;
-    margin-top: 60px;
+    width: 644px;
+    margin: auto;
+    margin-top: 39px;
     margin-bottom: 60px;
-    width: 100%;
     display: flex;
+    flex-wrap: wrap
 }
 
 .card {
     position: relative;
-    height: 200px;
-    display: block;
-    width: 20%;
+    height: 160px;
+    width: 160px;
     margin: auto;
 }
 
 .FlipBox {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.25);
+    /*border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.25);*/
     transform-style: preserve-3d;
     transition: all 0.6s linear;
+}
+
+.FlipBox img {
+    height: 100%;
+    width: 100%;
 }
   
 .FlipFront {
@@ -73,10 +104,8 @@
     border-radius: 10px;
     transform: rotateY(180deg);
     box-sizing: border-box;
-    padding: 10px;
     color: white;
     text-align: center;
-    background-color: orange;
     backface-visibility: hidden;
     webkit-backface-visibility: hidden;
 }
@@ -87,67 +116,29 @@
     box-shadow: -5px 5px 5px #ddd;
   }
 
-.orangeLong {
-    position: relative;
-    border: 3px solid orange;
-    margin-top: 0;
-    width: 100%;
+.lato-title {
+    composes: lato-title from global;
+    color: black;
 }
 
-.flixBoxCenter {
-    composes: Latoh1 from global;
-    font-size: 3rem;
-    text-align: center;
+.lato-oversize {
+    composes: lato-oversize from global;
     color: orange;
-    margin-top: 15%;
 }
 
-.flixBoxBottom {
-    composes: SourceB from global;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-}
-
-.flixBoxBackContent {
-    composes: Latoh2 from global;
-    font-size: 1.4rem;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-}
-
-.Latoh2 {
-    margin-left: 10%;
-    margin-top: 1px;
-    composes: Latoh2 from global;
-    font-weight: 600;
-}
-
-.SourceB {
-    composes: Sourcebody from global;
-    line-height: 1rem;
-    font-weight: 200;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5px;
-}
-
-@media (max-width:900px) {
-    .cards {
-        display: inline-block;
-    }
+@media screen and (max-width:900px) {
     .card {
-        width: 40%;
+        height: 320px;
+        width: 320px;
+    }
+    .card img{
+        width: 100%
     }
 }
 
-@media (max-width:500px) {
-    .cards {
-        display: block;
-    }
+@media screen and (max-width:500px) {
     .card {
-        width: 80%;
+        height: 640px;
+        width: 640px;
     }
 }

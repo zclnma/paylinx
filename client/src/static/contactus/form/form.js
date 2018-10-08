@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Row, Col, Button, /*AutoComplete*/ } from 'antd';
 
-import style from './form.css';
+import './form.css';
 const FormItem = Form.Item;
 //const AutoCompleteOption = AutoComplete.Option;
 
@@ -69,7 +69,6 @@ class RegistrationForm extends React.Component {
 
     return (
       <div id='form'>
-        <div className={style.form}>Fill in the form below and we’ll get back to you within the next 24 business hours.</div>
       <Form onSubmit={this.handleSubmit}>
       <Row gutter={8}>
             <Col span={12}>
@@ -142,7 +141,7 @@ class RegistrationForm extends React.Component {
               )}
         </FormItem>
         <FormItem {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">Register</Button>
+          <Button type="primary" htmlType="submit">Submit</Button>
         </FormItem>
       </Form>
       </div>

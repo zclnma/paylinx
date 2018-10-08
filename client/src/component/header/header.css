@@ -1,17 +1,19 @@
+@value sea-buckthron from '../../app/App.css';
+
 .header {
     position: absolute;
     width: 100%;
-    height: 64px;
+    height: 100px;
     z-index: 1;
     display: flex;
     overflow: hidden;
 }
 
 .logo {
-    margin-left: 40px;
-    margin-top: 15px;
+    margin-left: 53px;
+    margin-top: 25px;
     margin-bottom: auto;
-    width: 160px;
+    width: 82px;
 }
 
 .logo img{
@@ -21,15 +23,23 @@
 
 .navItem {
     position: absolute;
-    top: 15px;
-    width: 260px;
+    top: 28px;
+    width: 230px;
     right: 50px;
     display: flex;
 }
 
 .navItem img{
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
+}
+
+.close img{
+    width: 20px;
+    position: absolute;
+    right: 40px;
+    top: 40px; 
+    z-index: 1;
 }
 
 .getInTouchContainer {
@@ -37,18 +47,23 @@
     box-sizing: border-box;
     border: 1px solid white;
     border-radius: 9999px;
-    padding: 2px;
+    padding: 1px;
     cursor: pointer;
 }
 
 .getInTouch {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
 }
+
+.getInTouchContainer:hover{
+    background-color: sea-buckthron;
+    border: 1px solid sea-buckthron;
+} 
 
 .icon {
     margin: auto;

@@ -1,34 +1,34 @@
 .cards {
     align-items: center;
-    margin-top: 60px;
+    margin-top: 28px;
+    padding-bottom: 59px;
     width: 100%;
     display: flex;
+    background-color: #F8F8F8;
 }
 
 .card {
     transition: 0.3s;
     position: relative;
-    height: 200px;
+    height: 144px;
     display: block;
-    width: 18%;
+    width: 143px;
     margin: auto;
     background: #FFFFFF;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.11);
 }
 
 .card img{
-    margin: 30px;
-    max-width: 80px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
 }
 
 .card:hover {
     transition: 0.3s;
-    width: 36%;
+    width: 286px;
     position: relative;
-}
-
-.card:hover {
-    
 }
 
 .orange {
@@ -36,14 +36,14 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .icons {
     position: relative;
     display: flex;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -51,21 +51,20 @@
     height: 80px;
     display: block;
     width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
+    margin: auto;
 }
 
 .icon img{
-    max-width: 50px;
+    width: 40px;
     margin:auto;
 }
 
-.Latoh2 {
-    composes: Latoh2 from global;
-    line-height: 1rem
+.lato-title {
+    composes: lato-title from global;
+    color: black;
 }
 
-.Latoh3 {
-    composes: Latoh3 from global;
+.lato-subtitle {
+    composes: lato-subtitle from global;
+    color: black;
 }

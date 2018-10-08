@@ -8,7 +8,7 @@ import Cards from './cards/cards';
 import Solutions from './solutions/solution';
 import Marketing from './marketing/marketing';
 
-import style from './Home.css';
+import './Home.css';
 import {Layout} from 'antd';
 
 const {Content} = Layout;
@@ -21,14 +21,14 @@ export default class App extends React.Component {
         <Header />
         <Content>
           <Banner />
-          <div className={style.container}>
-            <span className={style.Latoh2}>Paylinx services help your business</span>
-            <div style={{marginBottom: '40px', width:'60%',margin:'auto'}} className={style.SourceB}>
+          <div styleName="container">
+            <span styleName="lato-title">Paylinx services help your business</span>
+            <div style={{marginBottom: '40px', width:'355px',margin:'auto'}} className="body">
               paylinx is committed to delivering advanced solutions which provide professional and secure payment acceptance models.
             </div>
-            <div className={style.logoContainer}>
-              <img src={Alipay} alt="" />
+            <div styleName="logoContainer">
               <img src={WechatPay} alt="" />
+              <img src={Alipay} alt="" />
             </div>
             <Cards />
           </div>

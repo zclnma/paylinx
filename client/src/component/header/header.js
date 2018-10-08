@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import style from './header.css'
+import {Menu, Dropdown, Icon} from 'antd';
 
+import Modal from '../Modal/Modal';
+import Search from './searchBar/searchBar';
+import MenuList from '../menus';
+
+import close from './images/icon_closeWhite.png';
 import Logo from './images/logo_orange.png';
 import MenuIcon from './images/icon_burgerMenu4.png';
 import SearchIcon from './images/icon_search.png';
 import UserIcon from './images/icon_user2.png';
 import Menus from './menus/menu';
 
-import {Menu, Dropdown, Icon} from 'antd';
-import Modal from './Modal/Modal';
-import Search from './searchBar/searchBar';
-import MenuList from '../menus';
-
-
+import './header.css';
 
 export default class header extends Component {
     state = {
@@ -49,41 +49,48 @@ export default class header extends Component {
             </Menu.Item>
             <Menu.Divider />
             <Menu.Item key="3">
-            <a style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/index.html">API Documents</a>
+            <a style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/index.html">API Documents (CN)</a>
+            </Menu.Item>
+            <Menu.Item key="4">
+            <a style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/en/index.html">API Documents (EN)</a>
             </Menu.Item>
         </Menu>
     );
 
     return (
-            <div className={style.header}>
-                <div className={style.logo}>
+            <div styleName="header">
+                <div styleName="logo">
                     <Link to="/"><img src={Logo} alt="" /></Link>
                 </div>
-                <div className={style.navItem}>
-                    <div className={style.getInTouchContainer}>
-                        <div className={style.getInTouch}><Link to='/contact-us' style={{ color:'white'}}> GET IN TOUCH</Link></div>
+                <div styleName="navItem">
+                    <div styleName="getInTouchContainer">
+                        <div styleName="getInTouch">
+                            <Link to='/contact-us' 
+                            style={{ color:'white'}}> 
+                            GET IN TOUCH
+                            </Link></div>
                     </div>
-                    <div className={style.icon} onClick={this.showModal}> 
+                    <div styleName="icon" onClick={this.showModal}> 
                         <img src={MenuIcon} alt="" />
                     </div>
-                    <div className={style.icon}> 
-                        <Dropdown overlay={userMenu} placement="bottomRight">
+                    <div styleName="icon"> 
+                        <Dropdown overlay={userMenu}>
                             <img src={UserIcon} alt="" />
                         </Dropdown>
                     </div>
-                    <div className={style.icon} onClick={this.showSearch}> 
+                    <div styleName="icon" onClick={this.showSearch}> 
                         <img src={SearchIcon} alt="" />
                     </div>
                 </div>
                 <Modal
                     show={this.state.showModal}
                     modalClosed={this.hideModal}>
-                    <div className={style.modalContainer}>
-                        <span onClick={this.hideModal} style={{cursor:'pointer'}}>
-                            <Icon 
-                                style={{fontSize: '40px', position:'absolute', right: '40px', top: '40px', zIndex:'1'}} 
-                                type="close" 
-                                theme="outlined" /></span>
+                    <div styleName="modalContainer">
+                        <span styleName="close" 
+                            onClick={this.hideModal} 
+                            style={{cursor:'pointer'}}>
+                            <img src={close} alt=""/>
+                        </span>
                             <Menus 
                                 image={MenuList.aboutUs.image}
                                 title={MenuList.aboutUs.title}
@@ -124,7 +131,7 @@ export default class header extends Component {
                 <Modal
                     show={this.state.showSearch}
                     modalClosed={this.hideSearch}>
-                    <div className={style.modalContainer}>
+                    <div styleName="modalContainer">
                         <span onClick={this.hideSearch} style={{cursor:'pointer'}}>
                             <Icon 
                                 style={{fontSize: '40px', position:'absolute', right: '40px', top: '40px', zIndex:'1'}} 

@@ -1,3 +1,5 @@
+@value sea-buckthron from '../../../app/App.css';
+
 .banner {
     position: relative;
     width: 100%;
@@ -24,33 +26,21 @@
     width: 20px;
 }
 
-.Latoh1 {
-    composes: Latoh1 from global;
+.lato-cover {
+    composes: global lato-cover from global;
+    line-height: 28px
 }
-.Latoh2 {
-    composes: Latoh2 from global;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-}
-.Latoh21 {
-    composes: Latoh2 from global;
-    color: white;
-    font-size: 24px;
+.lato-cover-thin {
+    composes: global lato-cover from global;
     font-weight: 300;
+    line-height: 28px
 }
-
-.SourceB {
-    composes: Sourcebody from global;
-    color: white;
-}
-
 .shadowCircle {
     position: absolute;
-    width: 16rem;
-    height: 16rem;
-    top: 22%;
-    left: 38.5%;
+    width: 249px;
+    height: 249px;
+    top: 83px;
+    left: 241px;
     border-radius: 50%;
     background: rgba(42,42,50,0.38);
     box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50), inset 2px 3px 1px 4px rgba(155,155,155,0.23);
@@ -74,9 +64,10 @@
 }
 
 .getInTouchContainer {
+    margin-top: 10px;
     width: 60%;
     box-sizing: border-box;
-    background-color: orange;
+    background-color: sea-buckthron;
     border-radius: 9999px;
     padding: 1px;
     cursor: pointer;
@@ -90,6 +81,11 @@
     font-weight: lighter;
     font-size: 16px;
     color: #ffffff;
+}
+
+.getInTouchContainer:hover {
+    background-color: transparent;
+    border: 1px solid white;
 }
 
 @media (max-width: 600px) {

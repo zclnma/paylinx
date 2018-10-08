@@ -1,19 +1,22 @@
 .container1 {
     text-align: center;
-    padding: 20px;
+    padding-top: 34px;
     background-color: white;
+    padding-bottom: 51px;
 }
 
 .logoContainer {
     margin: auto;
+    margin-top: 0px;
     margin-bottom: 50px; 
     padding: auto;
-    width: 400px;
+    width: 120px;
 }
 
 .logoContainer img{
-    max-width: 80px;
-    margin-left: 20px;  
+    width: 50px;
+    height: 18px;
+    margin-left: 10px;  
 }
 
 .solutions {
@@ -23,14 +26,15 @@
     width:100%;
 }
 .solution {
-    width: 40%;
+    height: 252px;
+    width: 312px;
     margin: auto;
     position: relative;
 }
 
 .solution img{
-    height: 350px;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
     margin:auto;
     background: #F8F8F8;
     box-shadow: 0 2px 5px 1px rgba(0,0,0,0.20), inset 0 -4px 16px 3px rgba(0,0,0,0.17);
@@ -52,8 +56,8 @@
 }
 
 .shadow img {
-    margin-top: 70px;
-    max-width: 60px;
+    margin-top: 40px;
+    width: 60px;
     height: auto;
 }
 
@@ -64,14 +68,13 @@
 }
 
 
-.Latoh2 {
-    composes: Latoh2 from global;
+.lato-title {
+    composes: lato-title from global;
+    color: black;
 }
 
-.Latoh3 {
-    composes: Latoh3 from global;
+.lato-subtitle {
+    composes: lato-subtitle from global;
+    color: black;
 }
 
-.SourceB {
-    composes: Sourcebody from global;
-}

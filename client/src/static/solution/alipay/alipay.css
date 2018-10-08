@@ -1,3 +1,5 @@
+@value sea-buckthron from '../../../app/App.css';
+
 .container {
     text-align: center;
     padding: 20px;
@@ -13,22 +15,13 @@
     max-width: 80%;
 }
 
-.Latoh2 {
-    composes: Latoh2 from global;
+.lato-title {
+    composes: lato-title from global;
+    color: black;
 }
 
-.Latoh3 {
-    composes: Latoh3 from global;
-    color: orange;
+.lato-cover-orange {
+    composes: lato-title from global;
+    color: sea-buckthron;
 }
 
-.SourceB {
-    composes: Sourcebody from global;
-}
-
-.Latoh31 {
-    composes: Latoh3 from global;
-    color: orange;
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-}

@@ -10,15 +10,7 @@
     max-width: 80%;
 }
 
-.Latoh2 {
-    composes: Latoh2 from global;
-}
-
-.Latoh3 {
-    composes: Latoh3 from global;
-    color: orange;
-}
-
-.SourceB {
-    composes: Sourcebody from global;
+.lato-title {
+    composes: lato-title from global;
+    color: black
 }

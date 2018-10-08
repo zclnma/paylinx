@@ -1,14 +1,16 @@
 import React,{Component} from 'react'
+import {Icon} from 'antd';
+import QueueAnim from 'rc-queue-anim';
+
 import Online from '../images/img_online.jpg';
 import InStore from '../images/img_inStore.jpg';
 import Alipay from '../images/logo_Alipay.png';
 import WechatPay from '../images/logo_WeChat Pay.png';
-import ICON from '../images/icon_marketing.png';
-import Modal from './Modal/Modal';
-import style from './solution.css';
+import onlineIcon from '../images/icon_online.png';
+import offlineIcon from '../images/icon_offline.png';
+import Modal from '../../../component/Modal/Modal';
 
-import {Icon} from 'antd';
-import QueueAnim from 'rc-queue-anim';
+import './solution.css';
 
 class Solutions extends Component {
   state = {
@@ -48,7 +50,7 @@ class Solutions extends Component {
     if (this.state.OnlineHover) {
       online = 
       <div 
-        className={style.shadow}
+        styleName="shadow"
         onClick = {() => this.modalShowHandler('online')}
         >
         <QueueAnim 
@@ -56,9 +58,9 @@ class Solutions extends Component {
         animConfig={[
             { opacity: [1, 0], translateY: [0, 100] },
             { opacity: [1, 0], translateY: [0, -100] }]}>
-          <div key="1"><img src={ICON} alt='' /></div>
-          <div key="2"className={style.Latoh2}>Online</div>
-          <div key="3"className={style.Latoh3}>Start accepting payments online to boost your business among Chinese</div>
+          <div key="1"><img src={onlineIcon} alt='' /></div>
+          <div key="2" styleName="lato-title">Online</div>
+          <div key="3"styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
         </QueueAnim>
       </div>
     }
@@ -66,61 +68,66 @@ class Solutions extends Component {
     if(this.state.InStoreHover) {
       instore = 
       <div 
-        className={style.shadow}
+        styleName="shadow"
         onClick = {() => this.modalShowHandler('instore')}
         >
-        <div><img src={ICON} alt='' /></div>
-        <div className={style.Latoh2}>Instore</div>
-        <div className={style.Latoh3}>Be present on the Chinese mindsets accepting their prefered payment options</div>
+        <QueueAnim
+        className="demo-content"
+        animConfig={[
+            { opacity: [1, 0], translateY: [0, 100] },
+            { opacity: [1, 0], translateY: [0, -100] }]}>
+        <div key="1"><img src={offlineIcon} alt='' /></div>
+        <div key="2"styleName="lato-title">Instore</div>
+        <div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>
+        </QueueAnim>
       </div>
     }
 
 
 
     return (
-      <div className={style.container1}>
-      <span className={style.Latoh2}>Payment Solutions</span>
-      <div style={{marginBottom: '40px', width:'60%',margin:'auto'}} className={style.SourceB}>
-      Paylinx is committed to delivering advanced solutions which provide professional and secure payment acceptance models.
+      <div styleName="container1">
+      <span styleName="lato-title">Payment Solutions</span>
+      <div style={{marginBottom: '40px', width:'60%',margin:'auto'}} className="body">
+        Paylinx is committed to delivering advanced solutions which provide professional and secure payment acceptance models.
       </div>
-      <div className={style.solutions}>
-        <div className={style.solution} 
+      <div styleName="logoContainer">
+        <img src={Alipay} alt="" />
+        <img src={WechatPay} alt="" />
+      </div>
+      <div styleName="solutions">
+        <div styleName="solution"
           onMouseEnter={() => this.mouseEnterHandler('online')}
           onMouseLeave={() => this.mouseLeaveHandler('online')}>
           {online}
-          <div className={style.image}>
+          <div styleName="image">
             <img src={Online} alt="" />
           </div>
         </div>
-        <div className={style.solution}
+        <div styleName="solution"
             onMouseEnter={() => this.mouseEnterHandler('instore')}
             onMouseLeave={() => this.mouseLeaveHandler('instore')}>
             {instore}
-            <div className={style.image}>
+            <div styleName="image">
               <img src={InStore} alt="" />
             </div>
         </div>
       </div>
-      <div className={style.logoContainer}>
-        <img src={Alipay} alt="" />
-        <img src={WechatPay} alt="" />
-      </div>
       <Modal
           show={this.state.OnlineModal}
           modalClosed={() => this.modalHideHandler('online')}>
-          <div className={style.modalContainer}>
+          <div styleName="modalContainer">
             <span onClick={this.hideModal} style={{cursor:'pointer'}}>
               <Icon 
                   style={{fontSize: '40px', position:'absolute', right: '40px', top: '40px', zIndex:'1'}} 
                   type="close" 
                   theme="outlined" /></span>
-              666
           </div>
       </Modal>
       <Modal
           show={this.state.InStoreModal}
           modalClosed={() => this.modalHideHandler('instore')}>
-          <div className={style.modalContainer}>
+          <div styleName="modalContainer">
             <span onClick={this.hideModal} style={{cursor:'pointer'}}>
               <Icon 
                   style={{fontSize: '40px', position:'absolute', right: '40px', top: '40px', zIndex:'1'}} 

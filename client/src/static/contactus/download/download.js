@@ -1,10 +1,10 @@
 import React from 'react'
-import style from './download.css';
+import './download.css';
 import download from '../images/img_downloadOurApp.png';
 export default () => {
   return (
-    <div className={style.container} id='download'>
-        <div className={style.image}>
+    <div styleName="container" id='download'>
+        <div styleName="image">
             <img src={download} alt="" />
         </div>
     </div>

@@ -6,7 +6,7 @@ const menus = {
         color: "#303030",
         menu: [
             {
-                value: "Industry we service",
+                value: "Industries we service",
                 htag: "#industry"
             },
             {
@@ -41,7 +41,7 @@ const menus = {
     },
     caseStudy:{
         image: "icon_caseStudies",
-        title: "CASE STUDY",
+        title: "OUR CLIENTS",
         link: "/case-study",
         color: "#707070",
         menu: [

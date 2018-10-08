@@ -1,21 +1,62 @@
-:global(.Latoh1) {
-  font-family: 'Lato';
-  font-weight: bold;
-  font-size: 3rem;
+/* Font setting */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+/* Color setting */
+@value sea-buckthron: #faa634;
+@value black: #000000;
+@value white: #ffffff;
+@value iron: #d3d3d3;
+@value shark: #2a2a32;
+@value christine: #e0760b;
+
+:global(img) { 
+  content: normal !important; 
+}
+
+:global(a) {
   color: white;
-} 
-:global(.Latoh2) {
-  font-family: 'Lato';
-  font-weight: medium;
-  font-size: 2rem;
-} 
-:global(.Latoh3) {
-  font-family: 'Lato';
-  font-weight: normal;
-  font-size: 1rem;
-} 
-:global(.Sourcebody) {
+}
+
+/*font setting*/
+:global(.body) {
+  font-size: 10px;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: shark;
+}
+
+:global(.lato-oversize){
+  font-size: 48px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: white
+}
+
+:global(.lato-cover){
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  color: white
+}
+
+:global(.lato-title){
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-} 
+  color: white;
+}
+
+:global(.lato-subtitle){
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+:global(.lato-ssubtitle){
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: white;
+}

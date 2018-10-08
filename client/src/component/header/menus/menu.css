@@ -1,8 +1,10 @@
+@value iron from '../../../app/App.css';
+
 .lineBreak{
     width: 100%;
 }
 .orange {
-    border: 3px solid orange;
+    border-bottom: 5px solid orange;
     width: 20px;
     margin-bottom: 8px;
 }
@@ -21,8 +23,7 @@
 }
 
 .modal img{
-    max-width: 80px;
-    max-height: 80px;
+    width: 40px;
 }
 
 .modal ul{
@@ -31,4 +32,13 @@
     margin: 0;
     font-size: 18px;
     font-weight: lighter;
+    line-height: 15px;
+}
+
+.link {
+    color: iron;
+}
+
+.link:hover {
+    color: white;
 }
