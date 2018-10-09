@@ -46,7 +46,7 @@ const menus = {
         color: "#707070",
         menu: [
             {
-                value: "Case studies",
+                value: "Merchants",
                 htag: "#case",  
             },
             {
@@ -86,13 +86,13 @@ const menus = {
                 link: "http://paylinx.cn/merchant"
             },
             {
-                value: "Agenct login",
-                link: "http://paylinx.cn/merchant"
+                value: "API document (CN)",
+                link: "http://paylinx.cn/doc/index.html"
             },
             {
-                value: "API document",
-                link: "http://paylinx.cn/doc/index.html"
-            }
+                value: "API document (EN)",
+                link: "http://paylinx.cn/doc/en/index.html"
+            },
         ]
     }
 }

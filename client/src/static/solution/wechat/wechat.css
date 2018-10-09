@@ -17,12 +17,12 @@
 }
 
 .contentContainer {
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
 }
 
 .wechatImage {
-    width: 35%;
+    width: 300px;
     margin: auto;
 }
 
@@ -31,7 +31,8 @@
 }
 
 .content {
-    width:60%;
+    width:350px;
+    margin: auto;
 }
 
 .sec {
@@ -46,14 +47,14 @@
 
 .orange {
     margin:auto;
-    border: 3px solid orange;
+    border-bottom: 5px solid sea-buckthron;
     width: 50px;
 }
 
 .orangeV {
     margin: auto;
-    border: 2px solid orange;
-    width: 1px;
+    border-bottom: 20px solid sea-buckthron;
+    width: 3px;
     height: 80%;
     margin-right: 10px
 }
@@ -63,18 +64,10 @@
     color: black;
 }
 
-.lato-title-orange {
-    composes: lato-title from global;
+.lato-subtitle-orange {
+    composes: lato-subtitle from global;
     color: sea-buckthron;
 }
 
-.Latoh3 {
-    composes: Latoh3 from global;
-    color: orange;
-}
 
-.SourceB {
-    composes: Sourcebody from global;
-    list-style-position: outside;
-}
 

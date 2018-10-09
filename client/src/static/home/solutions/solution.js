@@ -1,6 +1,7 @@
-import React,{Component} from 'react'
+import React,{Component,Fragment} from 'react'
 import {Icon} from 'antd';
 import QueueAnim from 'rc-queue-anim';
+import MediaQuery from 'react-responsive';
 
 import Online from '../images/img_online.jpg';
 import InStore from '../images/img_inStore.jpg';
@@ -47,48 +48,65 @@ class Solutions extends Component {
 
     let online = null;
     let instore = null;
-    if (this.state.OnlineHover) {
-      online = 
-      <div 
-        styleName="shadow"
-        onClick = {() => this.modalShowHandler('online')}
-        >
-        <QueueAnim 
-        className="demo-content"
-        animConfig={[
-            { opacity: [1, 0], translateY: [0, 100] },
-            { opacity: [1, 0], translateY: [0, -100] }]}>
-          <div key="1"><img src={onlineIcon} alt='' /></div>
-          <div key="2" styleName="lato-title">Online</div>
-          <div key="3"styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
-        </QueueAnim>
-      </div>
-    }
+    online = 
+    <Fragment>
+      <MediaQuery query="(min-device-width: 501px)">
+      {this.state.OnlineHover ? 
+          <div 
+            styleName="shadow"
+            onClick = {() => this.modalShowHandler('online')}
+            >
+            <QueueAnim 
+            className="demo-content"
+            animConfig={[
+                { opacity: [1, 0], translateY: [0, 100] },
+                { opacity: [1, 0], translateY: [0, -100] }]}>
+              <div key="1"><img src={onlineIcon} alt='' /></div>
+              <div key="2" styleName="lato-title">Online</div>
+              <div key="3" styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
+            </QueueAnim>
+          </div> : null}
+      </MediaQuery>
+      <MediaQuery query="(max-device-width: 500px)">
+        <div styleName="shadow">
+          <div><img src={onlineIcon} alt='' /></div>
+          <div styleName="lato-title">Online</div>
+          <div styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
+        </div>
+      </MediaQuery>
+    </Fragment>
 
-    if(this.state.InStoreHover) {
-      instore = 
-      <div 
-        styleName="shadow"
-        onClick = {() => this.modalShowHandler('instore')}
-        >
-        <QueueAnim
-        className="demo-content"
-        animConfig={[
-            { opacity: [1, 0], translateY: [0, 100] },
-            { opacity: [1, 0], translateY: [0, -100] }]}>
+  instore = 
+    <Fragment>
+    <MediaQuery query="(min-device-width: 501px)">
+      {this.state.InStoreHover ? 
+          <div 
+            styleName="shadow"
+            onClick = {() => this.modalShowHandler('instore')}
+            >
+            <QueueAnim
+            className="demo-content"
+            animConfig={[
+                { opacity: [1, 0], translateY: [0, 100] },
+                { opacity: [1, 0], translateY: [0, -100] }]}>
+            <div key="1"><img src={offlineIcon} alt='' /></div>
+            <div key="2"styleName="lato-title">In-store</div>
+            <div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>
+            </QueueAnim>
+          </div> : null}
+    </MediaQuery>
+    <MediaQuery query="(max-device-width: 500px)">
+      <div styleName="shadow">
         <div key="1"><img src={offlineIcon} alt='' /></div>
-        <div key="2"styleName="lato-title">Instore</div>
+        <div key="2"styleName="lato-title">In-store</div>
         <div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>
-        </QueueAnim>
       </div>
-    }
-
-
-
+    </MediaQuery>
+  </Fragment>
     return (
       <div styleName="container1">
       <span styleName="lato-title">Payment Solutions</span>
-      <div style={{marginBottom: '40px', width:'60%',margin:'auto'}} className="body">
+      <div styleName="description" className="body">
         Paylinx is committed to delivering advanced solutions which provide professional and secure payment acceptance models.
       </div>
       <div styleName="logoContainer">

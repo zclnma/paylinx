@@ -2,8 +2,20 @@ import React,{Component} from 'react'
 
 import PaymentIMG from '../images/icon_payment.png';
 import SecurityIMG from '../images/icon_security.png';
-import MediaIMG from '../images/icon_payment.png';
+import MediaIMG from '../images/icon_media.png';
 import MarketingIMG from '../images/icon_marketing.png';
+import Marketingboost from './subicons/icon_marketing_boost.png';
+import Marketinggeo from './subicons/icon_marketing_geo.png';
+import Marketingtraffic from './subicons/icon_marketing_traffic.png';
+import Mediachannel from './subicons/icon_media_channel.png';
+import Mediaexposure from './subicons/icon_media_exposure.png';
+import Mediasubscribers from './subicons/icon_media_subscribers.png';
+import Paymentcost from './subicons/icon_payment_cost.png';
+import Paymentrate from './subicons/icon_payment_rate.png';
+import Paymentsettlement from './subicons/icon_payment_settlement.png';
+import Securitycharge from './subicons/icon_security_charge.png';
+import Securityfraud from './subicons/icon_security_fraud.png';
+import Securitylicense from './subicons/icon_security_license.png';
 
 import './cards.css';
 
@@ -77,20 +89,16 @@ class Cards extends Component {
         <div styleName="lato-title">Payment</div>
         <div styleName="icons">
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Paymentcost} alt="" />
+            <div className="body">Cost effective</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Paymentrate} alt="" />
+            <div className="body">Lower rate than international credit cards</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
-          </div>
-          <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Paymentsettlement} alt="" />
+            <div className="body">Free settlement</div>
           </div>
         </div>
     </div>
@@ -99,7 +107,7 @@ class Cards extends Component {
     !this.state.extSecurity ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('security')}>
-        <img src={PaymentIMG} alt="" />
+        <img src={SecurityIMG} alt="" />
         <div styleName="lato-subtitle">Security</div>
     </div> : 
     <div styleName="card"
@@ -108,20 +116,16 @@ class Cards extends Component {
         <div styleName="lato-title">Security</div>
         <div styleName="icons">
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Securitycharge} alt="" />
+            <div className="body">No Chargebacks</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Securityfraud} alt="" />
+            <div className="body">Fraud protection</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
-          </div>
-          <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Securitylicense} alt="" />
+            <div className="body">Australian Financial service license</div>
           </div>
         </div>
     </div>
@@ -130,7 +134,7 @@ class Cards extends Component {
     !this.state.extMedia ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('media')}>
-        <img src={PaymentIMG} alt="" />
+        <img src={MediaIMG} alt="" />
         <div styleName="lato-subtitle">Media</div>
     </div> : 
     <div styleName="card"
@@ -139,20 +143,16 @@ class Cards extends Component {
         <div styleName="lato-title">Media</div>
         <div styleName="icons">
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Mediachannel} alt="" />
+            <div className="body">200+ media channels offshore</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Mediaexposure} alt="" />
+            <div className="body">Exposure</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
-          </div>
-          <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Mediasubscribers} alt="" />
+            <div className="body">160,000+ subscribers in Australia</div>
           </div>
         </div>
     </div>
@@ -161,7 +161,7 @@ class Cards extends Component {
     !this.state.extMarketing ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('marketing')}>
-        <img src={PaymentIMG} alt="" />
+        <img src={MarketingIMG} alt="" />
         <div styleName="lato-subtitle">Marketing</div>
     </div> : 
     <div styleName="card"
@@ -170,20 +170,16 @@ class Cards extends Component {
         <div styleName="lato-title">Marketing</div>
         <div styleName="icons">
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Marketingboost} alt="" />
+            <div className="body">Boost your brand in Chinese social-media</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Marketinggeo} alt="" />
+            <div className="body">Geo-Targeting</div>
           </div>
           <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
-          </div>
-          <div styleName="icon">
-            <img src={PaymentIMG} alt="" />
-            <div className="body">Some words</div>
+            <img src={Marketingtraffic} alt="" />
+            <div className="body">Increase traffic</div>
           </div>
         </div>
     </div>
@@ -191,9 +187,9 @@ class Cards extends Component {
     return (
       <div styleName="cards">
           {payment}
-          {security}
-          {media}
           {marketing}
+          {media}
+          {security}        
       </div>
     )
   }

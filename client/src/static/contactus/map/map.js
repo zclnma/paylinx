@@ -1,6 +1,15 @@
 import React from 'react';
+
 import './map.css';
+
 import map from '../images/img_map.jpg';
+import sm2 from '../images/icon_socialMedia-02.png';
+import sm3 from '../images/icon_socialMedia-03.png';
+import sm4 from '../images/icon_socialMedia-04.png';
+import sm5 from '../images/icon_socialMedia-05.png';
+import sm6 from '../images/icon_socialMedia-06.png';
+
+
 export default () => {
 
   return (
@@ -30,6 +39,13 @@ export default () => {
                   <div style={{width: '30%'}}styleName="lato-subtitle">Business hours:</div>
                   <div className="body">10am-6pm (Mon-Fri)</div>
                 </div>
+              </div>
+              <div styleName="icons">
+                <span ><a href='https://www.facebook.com/paylinx/'><img src={sm3} alt="" /></a></span>
+                <span > <img src={sm2} alt="" /></span>        
+                <span ><a href='https://twitter.com/marketpaylinx?lang=en'><img src={sm4} alt="" /></a></span>
+                <span ><a href='https://www.instagram.com/paylinxau/?hl=en'><img src={sm5} alt="" /></a></span>
+                <span ><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/'><img src={sm6} alt="" /></a></span>
               </div>
             </div>
         </div>

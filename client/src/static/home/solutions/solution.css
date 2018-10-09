@@ -7,7 +7,7 @@
 
 .logoContainer {
     margin: auto;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 50px; 
     padding: auto;
     width: 120px;
@@ -17,6 +17,12 @@
     width: 50px;
     height: 18px;
     margin-left: 10px;  
+}
+
+.description {
+    margin-bottom: 40px;
+    width: 60%;
+    margin: auto;
 }
 
 .solutions {
@@ -36,8 +42,6 @@
     height: 100%;
     width: 100%;
     margin:auto;
-    background: #F8F8F8;
-    box-shadow: 0 2px 5px 1px rgba(0,0,0,0.20), inset 0 -4px 16px 3px rgba(0,0,0,0.17);
 }
 
 .solution:hover .image{
@@ -78,3 +82,30 @@
     color: black;
 }
 
+@media screen and (max-width: 500px) {
+    .description {
+        width: 90%;
+    }
+
+    .logoContainer{
+        display: none;
+    }
+    .solutions {
+        display: block;
+    }
+    .solution {
+        height: 504px;
+        width: 624px;
+    }
+    .shadow {
+        display: block
+    }
+    .shadow img {
+        margin-top: 50px;
+        width: 200px;
+        height: auto;
+    }
+    .solution:hover .image{
+        
+    }
+}

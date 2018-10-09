@@ -15,7 +15,7 @@ export default () => {
         </div>     
         <div styleName="ali"><img src={Merchants} alt="" /></div>
         <div styleName="lato-title">DISCOVER PLATFORM</div>
-        <div style={{width: '60%', margin: 'auto'}}className="body">As dthe world’s largest mobile payment platform, Alipay’s Discover Platform allows your business to leverage the Alibaba data ecosystem to achieve precise marketing outcomes. Discover Platform is an Alipay in-app platform which helps Chinese overseas connect, interact and meet with merchants. </div>
+        <div style={{width: '60%', margin: 'auto'}}className="body">As the world’s largest mobile payment platform, Alipay’s Discover Platform allows your business to leverage the Alibaba data ecosystem to achieve precise marketing outcomes. Discover Platform is an Alipay in-app platform which helps Chinese overseas connect, interact and meet with merchants. </div>
         <div styleName="ali"><img src={Ali} alt="" /></div>
     </div>
   )

@@ -1,5 +1,6 @@
 .iconBar {
     align-content: center;
+    text-align: center;
     display: flex;
     width: 100%; 
     margin-bottom: 20px;

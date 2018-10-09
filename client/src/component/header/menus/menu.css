@@ -42,3 +42,37 @@
 .link:hover {
     color: white;
 }
+
+.lato-ssubtitle {
+    composes: global lato-ssubtitle from global;
+}
+
+.lato-subtitle {
+    composes: global lato-subtitle from global;
+}
+
+@media screen and (max-width: 500px) {
+    .menu-mobile {
+        width: 30%;
+        margin: auto;
+        margin-left: 30px;
+        padding: auto;
+    }
+    .submenu-mobile {
+        width: 60%;
+        margin: auto;
+        padding: auto;
+    }
+    .modal-mobile {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        
+    }
+    .lato-subtitle{
+        font-size: 30px;
+    }
+    .link{
+        font-size: 26px;
+    }
+}

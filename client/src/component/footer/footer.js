@@ -9,6 +9,7 @@ import facebook from './images/icon_socialMedia-08.png';
 import ins from './images/icon_socialMedia-09.png';
 import twitter from './images/icon_socialMedia-10.png';
 import linkedin from './images/icon_socialMedia-11.png';
+import copyright from './images/copyright.png';
 
 import './footer.css';
 
@@ -28,19 +29,19 @@ export default class footer extends Component {
         <div styleName="container">
             <div styleName="section-top">
                 <div styleName="contact">
-                    <div styleName="lato-subtitle">CUSTOMER SERVICE HOTLINE</div>
+                    <div styleName="lato-subtitle">CUSTOMER SERVICE LINE</div>
                     <div styleName="lato-oversize">1300 03 12 83</div>
                 </div>
                 <div styleName="follow">
-                    <div className="lato-subtitle">FOLLOW US ON</div>
+                    <div styleName="lato-subtitle">FOLLOW US ON</div>
                     <div styleName="icons">
-                        <a href='https://www.facebook.com/paylinx/'><img src={facebook} alt="" /></a>
-                        <Popover content={content}>
+                        <span styleName="icon"><a href='https://www.facebook.com/paylinx/'><img src={facebook} alt="" /></a></span>
+                        <span styleName="icon"> <Popover content={content}>
                             <img src={wechat} alt="" />
-                        </Popover>                        
-                        <a href='https://twitter.com/marketpaylinx?lang=en'><img src={twitter} alt="" /></a>
-                        <a href='https://www.instagram.com/paylinxau/?hl=en'><img src={ins} alt="" /></a>
-                        <a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/'><img src={linkedin} alt="" /></a>
+                        </Popover></span>        
+                        <span styleName="icon"><a href='https://twitter.com/marketpaylinx?lang=en'><img src={twitter} alt="" /></a></span>
+                        <span styleName="icon"><a href='https://www.instagram.com/paylinxau/?hl=en'><img src={ins} alt="" /></a></span>
+                        <span styleName="icon"><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/'><img src={linkedin} alt="" /></a></span>
                     </div>
                 </div>
             </div>
@@ -153,9 +154,14 @@ export default class footer extends Component {
                 </div>
             </div>
             <div styleName="disclaimer">
-                <div styleName="link"
-                     className="lato-ssubtitle">Disclimer|Privacy Policy|Sitemap</div>
+                <Link 
+                    to='/'
+                    styleName="link"
+                    className="lato-ssubtitle">
+                    Privacy Policy
+                </Link>
             </div>
+            <span styleName="copyright" className="lato-ssubtitle">Copyright © 2018 Paylinx Pty Ltd. All rights reserved.</span>
         </div>
       </div>
     )

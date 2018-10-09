@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaQuery from 'react-responsive'
 import Banner from './banner/banner';
 import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
@@ -22,14 +23,23 @@ export default class App extends React.Component {
         <Content>
           <Banner />
           <div styleName="container">
-            <span styleName="lato-title">Paylinx services help your business</span>
-            <div style={{marginBottom: '40px', width:'355px',margin:'auto'}} className="body">
-              paylinx is committed to delivering advanced solutions which provide professional and secure payment acceptance models.
-            </div>
-            <div styleName="logoContainer">
-              <img src={WechatPay} alt="" />
-              <img src={Alipay} alt="" />
-            </div>
+            
+            <MediaQuery query="(min-device-width: 501px)">
+              <span styleName="lato-title">Paylinx services help your business</span>
+              <div styleName="description" className="body">
+              We are proud that our offering is the only one of its kind available in the Australian marketplace incorporating a payment and digital solution that link to provide the best customer engagement platform to our merchant base.
+              </div>
+              <div styleName="logoContainer">
+                <img src={WechatPay} alt="" />
+                <img src={Alipay} alt="" />
+              </div>
+            </MediaQuery>
+            <MediaQuery query="(max-device-width: 500px)">
+              <span styleName="lato-title">Helping your business</span>
+              <div styleName="description" className="body">
+                We are proud that our offering is the only one of its kind available in the Australian marketplace incorporating a payment and digital solution.
+              </div>
+            </MediaQuery>
             <Cards />
           </div>
           <Solutions />

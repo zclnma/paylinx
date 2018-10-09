@@ -1,9 +1,9 @@
 import React,{Fragment} from 'react';
-import './marketing.css';
+import MediaQuery from 'react-responsive';
+
 import MarketingImg from '../images/img_marketing.jpg';
 import MediaImg from '../images/img_media.jpg';
 import News from '../images/img_australiaNews.png';
-
 import flip2 from '../images/flipbox/img_flipCards-02.png';
 import flip3 from '../images/flipbox/img_flipCards-03.png';
 import flip4 from '../images/flipbox/img_flipCards-04.png';
@@ -13,12 +13,13 @@ import flip7 from '../images/flipbox/img_flipCards-07.png';
 import flip8 from '../images/flipbox/img_flipCards-08.png';
 import flip9 from '../images/flipbox/img_flipCards-09.png';
 
+import './marketing.css';
 
 export default () => {
   return (
     <Fragment>
       <div styleName="container">
-        <div style={{position:'absolute', width:'50%',height:'100%'}}>
+        <div styleName="marketing">
           <div styleName="contentContainer"> 
             <div styleName="orange"></div>
             <div styleName="content">
@@ -27,7 +28,7 @@ export default () => {
               <div className="body">You can showcase your products through an in-app shop. Making simple and easy for customers to purchase your products through a “one-click-payment”, although they are back in China. Our marketing services gather the essentials to attract Chinese customers to your business.</div>
               <div className="body">The best way to be known and have presence among Chinese customers is being visible in the number one Chinese social media app, WeChat. Paylinx provides the solution for the exposure, creating a WeChat Official account. Creating the account gives merchants the chance to advertise and promote their businesses in the Chinese social app. The best way to boost your social media presence over 1 billion Chinese monthly active users. Having your brands’ image linked to a verified WeChat official account registered in your trading legal entities name, gives potential customers confidence. </div>
               <div className="body">
-                <ul style={{padding:'20px'}}>
+                <ul>
                   <li>CRM</li>
                   <li>Geo-Targeting</li>
                   <li>Content Translation</li>
@@ -41,24 +42,28 @@ export default () => {
             </div>
           </div>
         </div>
-        <div style={{position:'absolute', right:'0', width:'50%',height:'100%',backgroundColor:'rgba(51, 51, 51, 0.5)'}}>
-          <div styleName="big-logo">
-            <div className="lato-oversize">Exposure</div>
-            <div styleName="lato-oversize">Engagement</div>
-            <div className="lato-oversize">Growth.</div>
+        <MediaQuery query="(min-device-width: 501px)">
+          <div style={{position:'absolute', right:'0', width:'50%',height:'100%',backgroundColor:'rgba(51, 51, 51, 0.5)'}}>
+            <div styleName="big-logo">
+              <div className="lato-oversize">Exposure</div>
+              <div styleName="lato-oversize">Engagement</div>
+              <div className="lato-oversize">Growth.</div>
+            </div>
           </div>
-        </div>
+        </MediaQuery>
         <img src={MarketingImg} alt="" />
       </div>
       <div styleName="container">
-        <div style={{position:'absolute', width:'50%',height:'100%',backgroundColor:'rgba(51, 51, 51, 0.5)'}}>
-          <div styleName="big-logo">
-            <div className="lato-oversize">Exposure</div>
-            <div styleName="lato-oversize">Engagement</div>
-            <div className="lato-oversize">Growth.</div>
+        <MediaQuery query="(min-device-width: 501px)">
+          <div style={{position:'absolute', width:'50%',height:'100%',backgroundColor:'rgba(51, 51, 51, 0.5)'}}>
+            <div styleName="big-logo">
+              <div className="lato-oversize">Exposure</div>
+              <div styleName="lato-oversize">Engagement</div>
+              <div className="lato-oversize">Growth.</div>
+            </div>
           </div>
-        </div>
-        <div style={{position:'absolute', right:'0', width:'50%',height:'100%'}}>
+        </MediaQuery>
+        <div styleName="media">
           <div styleName="contentContainer">
             <div styleName="orange"></div>
             <div styleName="content">

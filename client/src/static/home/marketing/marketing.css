@@ -32,6 +32,10 @@
     text-align: justify;   
 }
 
+.content ul{
+    padding: 20px;
+}
+
 .content img{
     margin-top: 20px;
     width: 137px;
@@ -45,6 +49,19 @@
     margin-right: auto;
     width: 277px;
     height: 171px;
+}
+
+.marketing {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.media {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0px;
 }
 
 .orange {
@@ -113,7 +130,6 @@
 .card:hover .FlipBox{
     transform: rotateY(180deg);
     transition: 0.6s;
-    box-shadow: -5px 5px 5px #ddd;
   }
 
 .lato-title {
@@ -137,6 +153,32 @@
 }
 
 @media screen and (max-width:500px) {
+    .container {
+        width: 750px;
+        height: 1334px;
+        overflow: hidden;
+    }
+    .marketing {
+        width: 100%;
+    }
+    .media {
+        width: 100%;
+    }
+    .content {
+        width: 573px;  
+    }
+    .content img{
+        margin-top: 20px;
+        width: 260px;
+        height: 76px;
+        margin-bottom: 20px;
+    }
+    .orange {
+        margin-top: 118px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        width: 50px;
+    }
     .card {
         height: 640px;
         width: 640px;

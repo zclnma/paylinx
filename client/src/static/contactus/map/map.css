@@ -21,7 +21,7 @@
 
 .orange {
     position: relative;
-    border: 3px solid orange;
+    border-bottom: 5px solid orange;
     margin-top:50px;
     margin-left: 50px;
     margin-bottom: 10px;
@@ -30,7 +30,7 @@
 
 .detail-line {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .content {
@@ -38,6 +38,17 @@
     width: 90%;
     margin-left: 50px;
     text-align: justify;   
+}
+
+.icons {
+    position: relative;
+    width: 90%;
+}
+
+.icons img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
 }
 
 .lato-title {

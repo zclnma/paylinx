@@ -17,7 +17,7 @@
 }
 
 .logo img{
-    max-width:100%;
+    width:100%;
     height: auto;
 }
 
@@ -30,10 +30,22 @@
 }
 
 .navItem img{
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
 }
 
+.navItemHome {
+    position: absolute;
+    top: 28px;
+    width: 120px;
+    right: 50px;
+    display: flex;
+}
+
+.navItemHome img{
+    width: 16px;
+    height: 16px;
+}
 .close img{
     width: 20px;
     position: absolute;
@@ -56,7 +68,7 @@
     margin-right: 20px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 12px;
     color: #ffffff;
 }
 
@@ -79,6 +91,9 @@
 }
 
 @media (max-width: 500px) {
+    .header {
+        height: 200px;
+    }
     .getInTouchContainer {
         display: none;
     }
@@ -87,6 +102,22 @@
     }
 
     .logo {
-        width: 100px;
+        width: 253px;
+        height: 77px;
+        margin-left: 53px;
+        margin-top: 77px;
+    }
+    .navItem {
+        top: 77px;
+        width: 82px;
+        height: 82px;
+        right: 53px;
+    }
+    .navItem img{
+        width: 82px;
+        height: 82px;
+    }
+    .modalContainer {
+        display: block;
     }
 }

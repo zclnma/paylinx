@@ -51,15 +51,34 @@
 
 .icons {
     position: relative;
-    margin: auto;
 }
 
-.icons img{
+.icons img {
     width: 50px;
 }
-.icons img:hover{
-    width: 60px;
+
+
+/*.icon {
+    position: absolute;
+    right: 200px;
 }
+.icon1 {
+    position: absolute;
+    right: 150px;
+}
+.icon2 {
+    position: absolute;
+    right: 100px;
+}
+.icon3 {
+    position: absolute;
+    right: 50px;
+}
+
+.icon4 {
+    position: absolute;
+    right: 0px;
+}*/
 
 .link {
     color: iron;
@@ -69,8 +88,12 @@
     color: white;
 }
 
+.copyright {
+    color: iron;
+}
+
 .menu {
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .wechatQR {
@@ -99,7 +122,6 @@
 
     .contact{
         width: 100%;
-        text-align: center;
     };
     .follow {
         text-align: center;
@@ -110,5 +132,18 @@
     .icon {
         position: relative;
         bottom: 0px;
+    }
+    .lato-oversize {
+        font-size: 80px;
+    }
+    .follow {
+        text-align: left;
+        margin-left: 0px;
+    }
+    .lato-subtitle{
+        font-size:50px;
+    }
+    .icons img {
+        width: 100px;
     }
 }

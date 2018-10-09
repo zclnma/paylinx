@@ -1,5 +1,5 @@
 .container {
-    text-align: center;
+    text-align: left;
     padding: 20px;
 }
 
@@ -10,7 +10,7 @@
 
 .orange {
     margin:auto;
-    border: 3px solid orange;
+    border-bottom: 3px solid orange;
     width: 50px;
 }
 
@@ -23,16 +23,18 @@
     width: 90%;
     margin: auto;
     display: flex;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .card {
     position: relative;
-    height: 300px;
+    height: 200px;
     display: block;
     width: 30%;
     margin: auto;
 }   
 
 .service{
-    width: 80%; 
+    width: 68%; 
     margin: auto;
 }

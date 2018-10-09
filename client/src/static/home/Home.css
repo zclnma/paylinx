@@ -13,7 +13,7 @@
 
 .logoContainer {
     margin: auto;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 50px; 
     padding: auto;
     width: 120px;
@@ -24,7 +24,11 @@
     height: 18px;
     margin-left: 10px;  
 }
-
+.description {
+    margin-bottom: 40px;
+    width: 60%;
+    margin: auto;
+}
 .solutions {
     display: flex;
     margin-top: 40px;
@@ -44,3 +48,16 @@
     color: black;
 }
 
+@media screen and (max-width: 500px) {
+    .container {
+        padding-top: 58px;
+    }
+    .lato-title {
+        composes: lato-title from global;
+        color: black;
+        size: 48px
+    }
+    .description {
+        width: 90%
+    }
+}

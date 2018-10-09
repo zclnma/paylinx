@@ -2,7 +2,6 @@ import React from 'react'
 import './wechat.css';
 import Wechat from '../images/logo_WeChat.png';
 import WechatPay from '../images/logo_WeChat Pay.png';
-import WechatPhone from '../images/img_3phones.png';
 import Ma from  '../images/img_ma.png';
 import Mp from  '../images/img_mp.png';
 import Oa from  '../images/img_oa.png';
@@ -20,10 +19,10 @@ export default () => {
                 <img src={Ma} alt="" />
             </div>
             <div styleName="content">
-                <div styleName="lato-title-orange"><span styleName="orangeV"></span>CREATE WECHAT OFFICIAL ACCOUNT</div>
+                <div styleName="lato-subtitle-orange"><span styleName="orange"></span>CREATE WECHAT OFFICIAL ACCOUNT</div>
                 <ul style={{textAlign:'left'}} className="body">
                     <li>Boost your social media presence to over 1 billion new Chinese monthly active users</li>
-                    <li>Give potential customers confidence that your brands image on WeChat is linked to a verified WeChat Service Account registered in your trading legal entities name</li>
+                    <li>Give potential customers confidence that your brand's image on WeChat is linked to a verified WeChat Service Account registered in your trading legal entities name</li>
                     <li>Better manage interactions with a mini-website on WeChat</li>
                     <li>Showcase your products through an in-app shop. Customer check out through a “one-click-payment”</li>
                     <li>With a brand accounts, create a micro-site under the navigation bar to serve all of your content to the user, including a store locator page</li>
@@ -31,8 +30,8 @@ export default () => {
             </div>
         </div>
         <div styleName="contentContainer">
-            <div style={{marginLeft:'40px'}}styleName="content">
-                <div styleName="lato-title-orange"><span styleName="orangeV"></span>WECHAT MOMENTS</div>
+            <div styleName="content">
+                <div styleName="lato-subtitle-orange"><span styleName="orangeV"></span>WECHAT MOMENTS</div>
                 <div style={{textAlign:'left'}} className="body">
                 Moments act like a cross between a user’s Facebook page and newsfeed allowing the user to share their status, photos, articles, etc. with their WeChat contacts.   
                 </div>
@@ -50,7 +49,7 @@ export default () => {
                 <img src={Oa} alt="" />
             </div>
             <div styleName="content">
-                <div styleName="lato-title-orange"><span styleName="orangeV"></span>WECHAT MINI PROGRAM</div>
+                <div styleName="lato-subtitle-orange"><span styleName="orangeV"></span>WECHAT MINI PROGRAM</div>
                 <div style={{textAlign:'left'}} className="body">
                 With most of the features of an Official Service Account, essentially mini-programs are light apps built within WeChat allowing for a user experience similar to native iOS or Android apps.</div>
                 <br />
