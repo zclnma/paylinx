@@ -115,7 +115,7 @@
         width: 200px;
         height: auto;
     }
-    .solution:hover .image{
-        
+    .image{
+        filter: blur(4px); 
     }
 }

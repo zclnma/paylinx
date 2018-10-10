@@ -105,6 +105,9 @@ class Header extends Component {
                     <div styleName="icon" onClick={this.showModal}> 
                         <img src={MenuIconMobile} alt="" />
                     </div>
+                    <div styleName="icon" onClick={this.showSearch}> 
+                        <img src={SearchIcon} alt="" />
+                    </div>
                 </div>
                 </MediaQuery>
                 <Modal

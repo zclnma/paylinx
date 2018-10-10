@@ -16,7 +16,7 @@ export default () => {
         <Content >
           <Banner />
           <div styleName="form">
-            <div style={{textAlign: 'center', marginTop:'30px'}} styleName="lato-title">GET IN TOUCH</div>
+            <div style={{textAlign: 'center', marginTop:'30px', marginBottom:'30px'}} styleName="lato-title">GET IN TOUCH</div>
             <Form />
           </div>
           <Map />

@@ -108,11 +108,12 @@
     }
     .navItem {
         top: 77px;
-        width: 82px;
+        width: 200px;
         height: 82px;
-        right: 53px;
+        right: 75px;
     }
     .navItem img{
+        margin: auto;
         width: 82px;
         height: 82px;
     }

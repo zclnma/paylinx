@@ -70,7 +70,7 @@ class RegistrationForm extends React.Component {
     return (
       <div id='form'>
       <Form onSubmit={this.handleSubmit}>
-      <Row gutter={4}>
+      <Row gutter={2}>
             <Col span={12}>
         <FormItem
           label="Name"

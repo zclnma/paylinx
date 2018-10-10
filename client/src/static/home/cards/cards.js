@@ -1,4 +1,5 @@
-import React,{Component} from 'react'
+import React,{Component,Fragment} from 'react'
+import MediaQuery from 'react-responsive';
 
 import PaymentIMG from '../images/icon_payment.png';
 import SecurityIMG from '../images/icon_security.png';
@@ -77,7 +78,9 @@ class Cards extends Component {
     let payment,security,media,marketing = null;
 
     payment = 
-    !this.state.extPayment ? 
+    <Fragment>
+      <MediaQuery query="(min-device-width: 501px)">
+        {!this.state.extPayment ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('payment')}>
         <img src={PaymentIMG} alt="" />
@@ -101,10 +104,33 @@ class Cards extends Component {
             <div className="body">Free settlement</div>
           </div>
         </div>
+    </div>}
+    </MediaQuery>
+    <MediaQuery query="(max-device-width: 500px)">
+    <div styleName="card">
+        <div styleName="orange"></div>
+        <div styleName="lato-title">Payment</div>
+        <div styleName="icons">
+          <div styleName="icon">
+            <img src={Paymentcost} alt="" />
+            <div className="body">Cost effective</div>
+          </div>
+          <div styleName="icon">
+            <img src={Paymentrate} alt="" />
+            <div className="body">Lower rate than international credit cards</div>
+          </div>
+          <div styleName="icon">
+            <img src={Paymentsettlement} alt="" />
+            <div className="body">Free settlement</div>
+          </div>
+        </div>
     </div>
-
+    </MediaQuery>
+    </Fragment>
     security = 
-    !this.state.extSecurity ? 
+    <Fragment>
+    <MediaQuery query="(min-device-width: 501px)">
+    {!this.state.extSecurity ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('security')}>
         <img src={SecurityIMG} alt="" />
@@ -128,10 +154,33 @@ class Cards extends Component {
             <div className="body">Australian Financial service license</div>
           </div>
         </div>
+    </div>}
+    </MediaQuery>
+    <MediaQuery query="(max-device-width: 500px)">
+    <div styleName="card">
+        <div styleName="orange"></div>
+        <div styleName="lato-title">Security</div>
+        <div styleName="icons">
+          <div styleName="icon">
+            <img src={Securitycharge} alt="" />
+            <div className="body">No Chargebacks</div>
+          </div>
+          <div styleName="icon">
+            <img src={Securityfraud} alt="" />
+            <div className="body">Fraud protection</div>
+          </div>
+          <div styleName="icon">
+            <img src={Securitylicense} alt="" />
+            <div className="body">Australian Financial service license</div>
+          </div>
+        </div>
     </div>
-
+    </MediaQuery>
+    </Fragment>
     media = 
-    !this.state.extMedia ? 
+    <Fragment>
+    <MediaQuery query="(min-device-width: 501px)">
+    {!this.state.extMedia ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('media')}>
         <img src={MediaIMG} alt="" />
@@ -155,10 +204,33 @@ class Cards extends Component {
             <div className="body">160,000+ subscribers in Australia</div>
           </div>
         </div>
+    </div>}
+    </MediaQuery>
+    <MediaQuery query="(max-device-width: 500px)">
+    <div styleName="card">
+        <div styleName="orange"></div>
+        <div styleName="lato-title">Media</div>
+        <div styleName="icons">
+          <div styleName="icon">
+            <img src={Mediachannel} alt="" />
+            <div className="body">200+ media channels offshore</div>
+          </div>
+          <div styleName="icon">
+            <img src={Mediaexposure} alt="" />
+            <div className="body">Exposure</div>
+          </div>
+          <div styleName="icon">
+            <img src={Mediasubscribers} alt="" />
+            <div className="body">160,000+ subscribers in Australia</div>
+          </div>
+        </div>
     </div>
-
+    </MediaQuery>
+    </Fragment>
     marketing = 
-    !this.state.extMarketing ? 
+    <Fragment>
+    <MediaQuery query="(min-device-width: 501px)">
+    {!this.state.extMarketing ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('marketing')}>
         <img src={MarketingIMG} alt="" />
@@ -182,8 +254,29 @@ class Cards extends Component {
             <div className="body">Increase traffic</div>
           </div>
         </div>
+    </div>}
+    </MediaQuery>
+    <MediaQuery query="(max-device-width: 500px)">
+    <div styleName="card">
+        <div styleName="orange"></div>
+        <div styleName="lato-title">Marketing</div>
+        <div styleName="icons">
+          <div styleName="icon">
+            <img src={Marketingboost} alt="" />
+            <div className="body">Boost your brand in Chinese social-media</div>
+          </div>
+          <div styleName="icon">
+            <img src={Marketinggeo} alt="" />
+            <div className="body">Geo-Targeting</div>
+          </div>
+          <div styleName="icon">
+            <img src={Marketingtraffic} alt="" />
+            <div className="body">Increase traffic</div>
+          </div>
+        </div>
     </div>
-
+    </MediaQuery>
+    </Fragment>
     return (
       <div styleName="cards">
           {payment}

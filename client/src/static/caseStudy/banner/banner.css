@@ -23,6 +23,23 @@
     width: 50px;
 }
 
+@media (max-width: 500px) {
+    .banner {
+        height: 1334px;
+        overflow: hidden;
+    }
+    .banner img{
+        margin-left: -1000px;
+        height: 1334px;
+        width: auto;
+    }
+    .bannerInfo {
+        width: 300px;
+        left: 380px;
+        top: 450px;
+    }
+}
+
 .body {
     composes: body from global;
     color: white;
