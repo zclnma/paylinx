@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom';
-import {Menu, Dropdown, Icon} from 'antd';
+import {Menu, Dropdown} from 'antd';
 import MediaQuery from 'react-responsive';
 
 import Modal from '../Modal/Modal';
@@ -38,7 +38,6 @@ class Header extends Component {
     }
 
     hideSearch = () => {
-        console.log('hide')
         this.setState({showSearch: false})
     }
 

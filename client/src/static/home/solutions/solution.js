@@ -10,6 +10,8 @@ import WechatPay from '../images/logo_WeChat Pay.png';
 import onlineIcon from '../images/icon_online.png';
 import offlineIcon from '../images/icon_offline.png';
 import closeWhite from '../images/icon_closeWhite.png';
+import onlineOnclick from '../images/img_onlineOnClick.jpg';
+import offlineOnclick from '../images/img_offlineOnClick.jpg';
 
 import Modal from '../../../component/Modal/Modal';
 
@@ -68,6 +70,7 @@ class Solutions extends Component {
     <Fragment>
       <MediaQuery query="(min-device-width: 501px)">
       {this.state.OnlineHover ? 
+        <Fragment>
           <div 
             styleName="shadow"
             onClick = {() => this.modalShowHandler('online')}
@@ -81,7 +84,21 @@ class Solutions extends Component {
               <div key="2" styleName="lato-title">Online</div>
               <div key="3" styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
             </QueueAnim>
-          </div> : null}
+          </div>
+          <Modal
+                show={this.state.OnlineModal}
+                modalClosed={() => this.modalHideHandler('online')}>
+                <div styleName="modalContainer">
+                    <span styleName="close" 
+                        onClick={() => this.hideModal('online')} 
+                        style={{cursor:'pointer'}}>
+                        <img src={closeWhite} alt=""/>
+                    </span>
+                    <img src={onlineOnclick} alt=""/>
+                </div>
+          </Modal> 
+        </Fragment>
+          : null}
       </MediaQuery>
       <MediaQuery query="(max-device-width: 500px)">
         <div styleName="shadow">
@@ -96,6 +113,7 @@ class Solutions extends Component {
     <Fragment>
     <MediaQuery query="(min-device-width: 501px)">
       {this.state.InStoreHover ? 
+        <Fragment>
           <div 
             styleName="shadow"
             onClick = {() => this.modalShowHandler('instore')}
@@ -109,7 +127,21 @@ class Solutions extends Component {
             <div key="2"styleName="lato-title">In-store</div>
             <div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>
             </QueueAnim>
-          </div> : null}
+          </div> 
+          <Modal
+              show={this.state.InStoreModal}
+              modalClosed={() => this.modalHideHandler('instore')}>
+              <div styleName="modalContainer">
+                    <span styleName="close" 
+                      onClick={() => this.hideModal('instore')} 
+                      style={{cursor:'pointer'}}>
+                      <img src={closeWhite} alt=""/>
+                    </span>
+                    <img src={offlineOnclick} alt="" />
+              </div>
+          </Modal>
+        </Fragment>
+          : null}
     </MediaQuery>
     <MediaQuery query="(max-device-width: 500px)">
       <div styleName="shadow">
@@ -147,29 +179,6 @@ class Solutions extends Component {
             </div>
         </div>
       </div>
-      <Modal
-          show={this.state.OnlineModal}
-          modalClosed={() => this.modalHideHandler('online')}>
-          <div styleName="modalContainer">
-              <span styleName="close" 
-                  onClick={() => this.hideModal('online')} 
-                  style={{cursor:'pointer'}}>
-                  <img src={closeWhite} alt=""/>
-              </span>
-          </div>
-      </Modal>
-      <Modal
-          show={this.state.InStoreModal}
-          modalClosed={() => this.modalHideHandler('instore')}>
-          <div styleName="modalContainer">
-                <span styleName="close" 
-                  onClick={() => this.hideModal('instore')} 
-                  style={{cursor:'pointer'}}>
-                  <img src={closeWhite} alt=""/>
-                </span>
-              <div style={{width:'750px', height:'1334px', backgroundColor:'white'}}>666</div>
-          </div>
-      </Modal>
     </div>
     )
   }

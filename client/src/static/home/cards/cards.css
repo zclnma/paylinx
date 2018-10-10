@@ -2,7 +2,8 @@
     align-items: center;
     margin-top: 28px;
     padding-bottom: 59px;
-    width: 100%;
+    width: 90%;
+    margin:auto;
     display: flex;
     background-color: #F8F8F8;
 }
@@ -12,7 +13,7 @@
     position: relative;
     height: 144px;
     display: block;
-    width: 143px;
+    width: 123px;
     margin: auto;
     background: #FFFFFF;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.11);
@@ -27,7 +28,7 @@
 
 .card:hover {
     transition: 0.3s;
-    width: 286px;
+    width: 246px;
     position: relative;
 }
 
@@ -55,7 +56,7 @@
 }
 
 .icon img{
-    width: 30px;
+    width: 24px;
     margin:auto;
 }
 

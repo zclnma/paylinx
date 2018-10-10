@@ -10,7 +10,7 @@
 }
 
 .bannerInfo {
-    text-align: left;
+    text-align: justify;
     width: 250px;
     height: 200px;
     position: absolute;
@@ -26,4 +26,21 @@
 .body {
     composes: body from global;
     color: white;
+}
+
+@media (max-width: 500px) {
+    .banner {
+        height: 1334px;
+        overflow: hidden;
+    }
+    .banner img{
+        margin-left: -700px;
+        height: 1334px;
+        width: auto;
+    }
+    .bannerInfo {
+        width: 300px;
+        left: 80px;
+        top: 450px;
+    }
 }

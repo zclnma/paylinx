@@ -1,6 +1,9 @@
 .container {
-    text-align: left;
-    padding: 20px;
+    text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 90%;
+    margin:auto;
 }
 
 .container img{
@@ -37,4 +40,24 @@
 .service{
     width: 68%; 
     margin: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .cards {
+        display: block;
+    }
+    .card {
+        margin-top: 20px;
+        border: 1px solid gray;
+        height: 500px;
+        width: 100%;
+    }   
+
+    .card img{
+        margin-top: 40px;
+        width: 200px;
+    }
+    .service{
+        width: 90%; 
+    }
 }

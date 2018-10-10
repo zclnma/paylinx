@@ -60,3 +60,41 @@
     composes: lato-subtitle from global;
     color: black;
 }
+
+@media screen and (max-width:500px){
+    .bannerInfo {
+        background-color: white;
+        text-align: left;
+        top:0;
+        left:0;
+        bottom:0;
+        width: 100%;
+        position: relative;
+    }
+    .content{
+        margin-left: 0;
+    }
+    .orange {
+        border-bottom: 5px solid orange;
+        margin-top:0px;
+        padding-top: 50px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 35px;
+    }
+    .contentcontainer {
+        width: 90%;
+        margin: auto;
+    }
+    .icons {
+        padding-bottom: 30px;
+    }
+    .icons img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80px;
+    }
+    .lato-subtitle {
+        font-size: 20px;
+    }
+}

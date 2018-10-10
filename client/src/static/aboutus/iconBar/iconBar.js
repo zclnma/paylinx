@@ -14,35 +14,35 @@ export default () => {
     <div styleName="iconBar">
       <div styleName="icon">
         <img src={Industry1} alt= "" />
-        <div className="body">Hospitality</div>
+        <div styleName="body">Hospitality</div>
       </div>
       <div styleName="icon">
         <img src={Industry2} alt= "" />
-        <div className="body">Retail</div>
+        <div styleName="body">Retail</div>
       </div>
       <div styleName="icon">
         <img src={Industry3} alt= "" />
-        <div className="body">Education</div>
+        <div styleName="body">Education</div>
       </div>
       <div styleName="icon">
         <img src={Industry4} alt= "" />
-        <div className="body">Logistics</div>
+        <div styleName="body">Logistics</div>
       </div>
       <div styleName="icon">
         <img src={Industry5} alt= "" />
-        <div className="body">Medical Services</div>
+        <div styleName="body">Medical Services</div>
       </div>
       <div styleName="icon">
         <img src={Industry6} alt= "" />
-        <div className="body">Sporting Organisations</div>
+        <div styleName="body">Sporting Organisations</div>
       </div>
       <div styleName="icon">
         <img src={Industry7} alt= "" />
-        <div className="body">Major Events</div>
+        <div styleName="body">Major Events</div>
       </div>
       <div styleName="icon">
         <img src={Industry8} alt= "" />
-        <div className="body">Tourist Attractions</div>
+        <div styleName="body">Tourist Attractions</div>
       </div>
     </div>
   )

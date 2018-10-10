@@ -5,7 +5,6 @@ import Footer from '../../component/footer/footer';
 import Banner from './banner/banner';
 import Form from './form/form';
 import Map from './map/map';
-import Download from './download/download';
 import {Layout,Card} from 'antd';
 
 const {Content} = Layout;

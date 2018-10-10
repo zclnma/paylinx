@@ -14,9 +14,10 @@ export default () => {
 
   return (
     <div styleName="banner" id='location'>
-    <img src={map} alt=""/>
+        <img src={map} alt=""/>
         <div styleName="bannerInfo">
-            <div styleName="orange"></div>
+          <div styleName="contentcontainer">
+          <div styleName="orange"></div>
             <div styleName="content">
               <div style={{marginBottom: "20px"}}styleName="lato-title">Our details</div>
               <div>
@@ -48,6 +49,7 @@ export default () => {
                 <span ><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/' rel="noopener noreferrer" target="_blank"><img src={sm6} alt="" /></a></span>
               </div>
             </div>
+          </div>
         </div>
 </div>
   )

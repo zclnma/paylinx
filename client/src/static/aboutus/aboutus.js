@@ -17,11 +17,14 @@ export default () => {
       <Header />
       <Content>
         <Banner />
-        <div styleName="container" style={{backgroundColor:'white'}} id='industry'>
+        
+        <div style={{backgroundColor:'white',width:'100%'}} id='industry'>
+          <div styleName="container">
             <div style={{textAlign:"center"}} styleName="lato-title">Industries we service</div>
             <div className="body">Let us help you bring your brand to life by providing your business with the tools to Attract, Engage, and Convert your products and services into real dollars. Speak to Paylinx today about how we can connect your business to the WeChat and Alipay ecosystems. Nowhere else in the marketplace will you be able to access such a unique offering as the Paylinx solution, providing Australian businesses with the opportunity to create a platform of engagement linking it to the Chinese consumer.</div>
               <Services />
             <div className="body">Paylinx can also offer your business a unique opportunity to develop your Chinese client base with a social media reach comprising of up to 200 partner media channels in China, accompanied with our in-house social media resources currently reaching more than 600,000 Chinese in Australia to further enhance your brand's presence in the marketplace.</div>
+          </div>
         </div>
         <div styleName="container" id='story'>
           <div style={{textAlign:'center'}} styleName="lato-title" >Our Story</div>
@@ -31,7 +34,8 @@ export default () => {
             <div className="body">Today, we are proud that our offering is the only one of its kind available in the Australian marketplace incorporating a payment and digital solution that link to provide the best customer engagement platform to our merchant base.</div>
           </div>
         </div>
-        <div styleName="container" id='value' style={{backgroundColor:'white'}}>
+        <div style={{backgroundColor:'white',width:'100%'}} id='value'>
+        <div styleName="container">
           <div style={{textAlign:'center'}} styleName="lato-title">Our Values</div>
           <div styleName="cards">
             <div styleName="card">
@@ -54,6 +58,7 @@ export default () => {
             <div styleName="orange" style={{marginBottom:'10px', textAlign:'center'}}></div>
             <div style={{textAlign:'center'}}className="body">Our focus is on providing premium quality services and making payments easy, simple and highly secure between Australian merchants and Chinese customers.</div>
           </div>
+        </div>
         </div>
       </Content>
       <Footer />

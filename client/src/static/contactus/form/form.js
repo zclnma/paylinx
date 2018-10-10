@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Row, Col, Button, /*AutoComplete*/ } from 'antd';
+import { Form, Input, Row, Col, Button,  } from 'antd';
 
 import './form.css';
 const FormItem = Form.Item;
