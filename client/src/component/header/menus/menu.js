@@ -32,15 +32,19 @@ export default class menu extends Component {
             <div styleName="lato-subtitle" style={{marginTop: '10px'}}>{this.props.title}</div>
         </div> :  <div>
                 <div styleName="orange"></div>
-            <div styleName="lato-subtitle">{this.props.title === "LOG IN" ? 
+            <div 
+                styleName="lato-subtitle"
+                onClick={this.props.closed}>{this.props.title === "LOG IN" ? 
                 <a 
                     style={{ color:'white'}} 
-                    href={this.props.link}>
+                    href={this.props.link}
+                    rel="noopener noreferrer" target="_blank">
                     {this.props.title}
                 </a> : 
                 <Link 
                     to={this.props.link} 
-                    style={{ color:'white'}}>
+                    style={{ color:'white'}}
+                    >
                     {this.props.title}
                     </Link>}
                     </div>
@@ -49,14 +53,17 @@ export default class menu extends Component {
                     return   <QueueAnim>
                                 {
                                     this.props.title === "LOG IN" ? 
-                                    <li key={index}>
+                                    <li key={index}
+                                        onClick={this.props.closed}>
                                         <a  className="lato-ssubtitle"
                                             styleName="link" 
-                                            href={menu.link}>
+                                            href={menu.link}
+                                            rel="noopener noreferrer" target="_blank">
                                             {menu.value}
                                         </a>
                                     </li> :
-                                    <li key={index}>
+                                    <li key={index}
+                                        onClick={this.props.closed}>
                                         <Link to={[this.props.link,menu.htag].join('')} 
                                             className="lato-ssubtitle" 
                                             styleName="link">
@@ -72,10 +79,12 @@ export default class menu extends Component {
         <MediaQuery query="(max-device-width: 500px)">
             <div styleName="menu-mobile">
                 <div styleName="orange"></div>
-                <div styleName="lato-subtitle">{this.props.title === "LOG IN" ? 
+                <div styleName="lato-subtitle"
+                    onClick={this.props.closed}>{this.props.title === "LOG IN" ? 
                     <a 
                         style={{ color:'white'}} 
-                        href={this.props.link}>
+                        href={this.props.link}
+                        rel="noopener noreferrer" target="_blank">
                         {this.props.title}
                     </a> : 
                     <Link 
@@ -88,14 +97,17 @@ export default class menu extends Component {
                 <ul>            
                 {this.props.data.map((menu, index) =>{
                     return  this.props.title === "LOG IN" ? 
-                                    <li key={index}>
+                                    <li key={index}
+                                    onClick={this.props.closed}>
                                         <a className="lato-ssubtitle"
                                             styleName="link" 
-                                            href={menu.link}>
+                                            href={menu.link}
+                                            rel="noopener noreferrer" target="_blank">
                                             {menu.value}
                                         </a>
                                     </li> :
-                                    <li key={index}>
+                                    <li key={index}
+                                        onClick={this.props.closed}>
                                         <Link to={[this.props.link,menu.htag].join('')} 
                                             className="lato-ssubtitle" 
                                             styleName="link">

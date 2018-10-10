@@ -38,6 +38,7 @@ class Header extends Component {
     }
 
     hideSearch = () => {
+        console.log('hide')
         this.setState({showSearch: false})
     }
 
@@ -122,6 +123,7 @@ class Header extends Component {
                                 link={MenuList.aboutUs.link}
                                 data={MenuList.aboutUs.menu}
                                 color={MenuList.aboutUs.color}
+                                closed={this.hideModal}
                                 />
                             <Menus 
                                 image={MenuList.solution.image}
@@ -129,6 +131,7 @@ class Header extends Component {
                                 link={MenuList.solution.link}
                                 data={MenuList.solution.menu}
                                 color={MenuList.solution.color}
+                                closed={this.hideModal}
                                 />
                             <Menus 
                                 image={MenuList.caseStudy.image}
@@ -136,6 +139,7 @@ class Header extends Component {
                                 link={MenuList.caseStudy.link}
                                 data={MenuList.caseStudy.menu}
                                 color={MenuList.caseStudy.color}
+                                closed={this.hideModal}
                                 />
                             <Menus 
                                 image={MenuList.contactUs.image}
@@ -143,6 +147,7 @@ class Header extends Component {
                                 link={MenuList.contactUs.link}
                                 data={MenuList.contactUs.menu}
                                 color={MenuList.contactUs.color}
+                                closed={this.hideModal}
                                 />
                             <Menus 
                                 image={MenuList.login.image}
@@ -150,6 +155,7 @@ class Header extends Component {
                                 link={MenuList.login.link}
                                 data={MenuList.login.menu}
                                 color={MenuList.login.color}
+                                closed={this.hideModal}
                                 />
                     </div>
                 </Modal>

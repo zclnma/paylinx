@@ -9,6 +9,8 @@ import Alipay from '../images/logo_Alipay.png';
 import WechatPay from '../images/logo_WeChat Pay.png';
 import onlineIcon from '../images/icon_online.png';
 import offlineIcon from '../images/icon_offline.png';
+import closeWhite from '../images/icon_closeWhite.png';
+
 import Modal from '../../../component/Modal/Modal';
 
 import './solution.css';
@@ -21,26 +23,40 @@ class Solutions extends Component {
     InStoreModal: false,
   }
 
-  mouseEnterHandler = (type) => {
-    type === 'online' ?
-      this.setState({OnlineHover: true}) :
+  mouseEnterHandler = function(type){
+    console.log(type)
+    if(type === 'online') {
+      console.log(this.state.OnlineHover);
+      this.setState({OnlineHover: true},() => {
+        console.log('updated state value', this.state)
+    })
+    } else {
       this.setState({InStoreHover: true});
+    }
   }
   mouseLeaveHandler = (type) => {
+    console.log(type)
     type === 'online' ?
-      this.setState({OnlineHover: false}) :
+      this.setState({OnlineHover: false},() => {
+        console.log('updated state value', this.state)
+    }) :
       this.setState({InStoreHover: false});
   }
 
   modalShowHandler = (type) => {
+    console.log(this.state.OnlineModal,this.state.InStoreModal)
     type === 'online' ?
-      this.setState({OnlineModal: true}) :
+      this.setState({OnlineModal: true},() => {
+        console.log('updated state value', this.state)
+    }) :
       this.setState({InStoreModal: true})
   }
 
   modalHideHandler = (type) => {
     type === 'online' ?
-      this.setState({OnlineModal: false}) :
+      this.setState({OnlineModal: false},() => {
+        console.log('updated state value', this.state)
+    }) :
       this.setState({InStoreModal: false})
   }
 
@@ -135,23 +151,23 @@ class Solutions extends Component {
           show={this.state.OnlineModal}
           modalClosed={() => this.modalHideHandler('online')}>
           <div styleName="modalContainer">
-            <span onClick={this.hideModal} style={{cursor:'pointer'}}>
-              <Icon 
-                  style={{fontSize: '40px', position:'absolute', right: '40px', top: '40px', zIndex:'1'}} 
-                  type="close" 
-                  theme="outlined" /></span>
+              <span styleName="close" 
+                  onClick={() => this.hideModal('online')} 
+                  style={{cursor:'pointer'}}>
+                  <img src={closeWhite} alt=""/>
+              </span>
           </div>
       </Modal>
       <Modal
           show={this.state.InStoreModal}
           modalClosed={() => this.modalHideHandler('instore')}>
           <div styleName="modalContainer">
-            <span onClick={this.hideModal} style={{cursor:'pointer'}}>
-              <Icon 
-                  style={{fontSize: '40px', position:'absolute', right: '40px', top: '40px', zIndex:'1'}} 
-                  type="close" 
-                  theme="outlined" /></span>
-              <div style={{width:'100%', height:'100%', backgroundColor:'white'}}>666</div>
+                <span styleName="close" 
+                  onClick={() => this.hideModal('instore')} 
+                  style={{cursor:'pointer'}}>
+                  <img src={closeWhite} alt=""/>
+                </span>
+              <div style={{width:'750px', height:'1334px', backgroundColor:'white'}}>666</div>
           </div>
       </Modal>
     </div>

@@ -31,19 +31,19 @@ class Cards extends Component {
     switch (type) {
       case 'payment':
         this.setState({extPayment: true})
-        console.log('onmouse enter')
+        console.log('onmouse enter1')
         break;
       case 'security':
         this.setState({extSecurity: true})
-        console.log('onmouse enter')
+        console.log('onmouse enter2')
         break;
       case 'media':
         this.setState({extMedia: true})
-        console.log('onmouse enter')
+        console.log('onmouse enter3')
         break;
       case 'marketing':
         this.setState({extMarketing: true})
-        console.log('onmouse enter')
+        console.log('onmouse enter4')
         break;
       default:
         break;
@@ -54,19 +54,19 @@ class Cards extends Component {
     switch (type) {
       case 'payment':
         this.setState({extPayment: false})
-        console.log('onmouse enter')
+        console.log('onmouse leave1')
         break;
       case 'security':
         this.setState({extSecurity: false})
-        console.log('onmouse enter')
+        console.log('onmouse leave2')
         break;
       case 'media':
         this.setState({extMedia: false})
-        console.log('onmouse enter')
+        console.log('onmouse leave3')
         break;
       case 'marketing':
         this.setState({extMarketing: false})
-        console.log('onmouse enter')
+        console.log('onmouse leave4')
         break;
       default:
         break;

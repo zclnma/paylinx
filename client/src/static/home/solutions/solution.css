@@ -48,6 +48,14 @@
     filter: blur(4px);
 }
 
+.close img{
+    width: 20px;
+    position: absolute;
+    right: 40px;
+    top: 40px; 
+    z-index: 1;
+}
+
 .shadow {
     position: absolute;
     width: 80%;
@@ -68,7 +76,6 @@
 .modalContainer {
     height: 100%;
     width: 100%;
-
 }
 
 

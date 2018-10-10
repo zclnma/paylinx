@@ -69,10 +69,6 @@ const menus = {
                 value: "Our location",
                 htag: "#location",
             },
-            {
-                value: "Download our App",
-                htag: "#download"
-            }
         ]
     },
     login:{

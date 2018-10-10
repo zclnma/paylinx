@@ -4,7 +4,7 @@
 .footer {
     width: 100%;
     background-color: shark;
-    padding: 53px;
+    padding: 30px;
 }
 
 .container {
@@ -21,17 +21,18 @@
 
 .footer li{
     color: iron;
+    line-height: 14px;
 }
 
 .section-top{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 21px;
+    margin-bottom: 10px;
 }
 
 .section-bottom{
-    margin-top: 29px;
+    margin-top: 15px;
     position: relative;
     display: flex;
 }
@@ -134,16 +135,17 @@
         bottom: 0px;
     }
     .lato-oversize {
-        font-size: 80px;
+        font-size: 60px;
+        font-weight: 400px;
     }
     .follow {
         text-align: left;
         margin-left: 0px;
     }
     .lato-subtitle{
-        font-size:50px;
+        font-size:30px;
     }
     .icons img {
-        width: 100px;
+        width: 80px;
     }
 }

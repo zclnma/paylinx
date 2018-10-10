@@ -6,9 +6,9 @@ import MenuList from '../menus';
 import wechatQR from './images/wechatQR.png';
 import wechat from './images/icon_socialMedia-07.png';
 import facebook from './images/icon_socialMedia-08.png';
-import ins from './images/icon_socialMedia-09.png';
+import linkedin from './images/icon_socialMedia-09.png';
 import twitter from './images/icon_socialMedia-10.png';
-import linkedin from './images/icon_socialMedia-11.png';
+import ins from './images/icon_socialMedia-11.png';
 import copyright from './images/copyright.png';
 
 import './footer.css';
@@ -35,13 +35,13 @@ export default class footer extends Component {
                 <div styleName="follow">
                     <div styleName="lato-subtitle">FOLLOW US ON</div>
                     <div styleName="icons">
-                        <span styleName="icon"><a href='https://www.facebook.com/paylinx/'><img src={facebook} alt="" /></a></span>
                         <span styleName="icon"> <Popover content={content}>
                             <img src={wechat} alt="" />
-                        </Popover></span>        
-                        <span styleName="icon"><a href='https://twitter.com/marketpaylinx?lang=en'><img src={twitter} alt="" /></a></span>
-                        <span styleName="icon"><a href='https://www.instagram.com/paylinxau/?hl=en'><img src={ins} alt="" /></a></span>
-                        <span styleName="icon"><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/'><img src={linkedin} alt="" /></a></span>
+                        </Popover></span>  
+                        <span styleName="icon"><a href='https://www.facebook.com/paylinx/' rel="noopener noreferrer" target="_blank"><img src={facebook} alt="" /></a></span>      
+                        <span styleName="icon"><a href='https://twitter.com/marketpaylinx?lang=en' rel="noopener noreferrer" target="_blank"><img src={twitter} alt="" /></a></span>
+                        <span styleName="icon"><a href='https://www.instagram.com/paylinxau/?hl=en' rel="noopener noreferrer" target="_blank"><img src={ins} alt="" /></a></span>
+                        <span styleName="icon"><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/' rel="noopener noreferrer" target="_blank"><img src={linkedin} alt="" /></a></span>
                     </div>
                 </div>
             </div>
@@ -132,22 +132,23 @@ export default class footer extends Component {
                     </ul>
                 </div>
                 <div styleName="menu">
-                    <Link 
-                        to={MenuList.login.link}
+                    <a 
+                        href={MenuList.login.link}
                         styleName="link"
                         className="lato-subtitle"
-                        onClick={this.scrollToTop}>
+                        rel="noopener noreferrer" target="_blank">
                             {MenuList.login.title}
-                    </Link>
+                    </a>
                     <ul>
                         {MenuList.login.menu.map((me,index) => {
                             return <li key={index}>
-                            <Link
-                                to={[MenuList.login.link, me.htag].join('')} 
+                            <a
+                                href={me.link}
                                 styleName="link"
-                                className="lato-ssubtitle">
+                                className="lato-ssubtitle"
+                                rel="noopener noreferrer" target="_blank">
                                 {me.value}
-                                </Link>
+                            </a>
                             </li>
                         })}
                     </ul>
