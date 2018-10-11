@@ -13,7 +13,7 @@ import closeWhite from '../images/icon_closeWhite.png';
 import onlineOnclick from '../images/img_onlineOnClick.jpg';
 import offlineOnclick from '../images/img_offlineOnClick.jpg';
 
-import Modal from '../../../component/Modal/Modal';
+import Modal from './Modal/Modal';
 
 import './solution.css';
 
@@ -25,41 +25,28 @@ class Solutions extends Component {
     InStoreModal: false,
   }
 
-  mouseEnterHandler = function(type){
-    console.log(type)
-    if(type === 'online') {
-      console.log(this.state.OnlineHover);
-      this.setState({OnlineHover: true},() => {
-        console.log('updated state value', this.state)
-    })
-    } else {
-      this.setState({InStoreHover: true});
-    }
-  }
-  mouseLeaveHandler = (type) => {
-    console.log(type)
+  mouseEnterHandler = type => {
     type === 'online' ?
-      this.setState({OnlineHover: false},() => {
-        console.log('updated state value', this.state)
-    }) :
+      this.setState({OnlineHover: true}) :  
+      this.setState({InStoreHover: true});
+  }
+
+  mouseLeaveHandler = (type) => {
+    type === 'online' ?
+      this.setState({OnlineHover: false}) :
       this.setState({InStoreHover: false});
   }
 
   modalShowHandler = (type) => {
-    console.log(this.state.OnlineModal,this.state.InStoreModal)
     type === 'online' ?
-      this.setState({OnlineModal: true},() => {
-        console.log('updated state value', this.state)
-    }) :
-      this.setState({InStoreModal: true})
+      this.setState({OnlineModal: true, OnlineHover: false}) :
+      this.setState({InStoreModal: true, InStoreHover: false})
   }
 
   modalHideHandler = (type) => {
     type === 'online' ?
-      this.setState({OnlineModal: false},() => {
-        console.log('updated state value', this.state)
-    }) :
-      this.setState({InStoreModal: false})
+      this.setState({OnlineModal: false, OnlineHover: false}) :
+      this.setState({InStoreModal: false, InStoreHover: false})
   }
 
   render (){
@@ -85,18 +72,6 @@ class Solutions extends Component {
               <div key="3" styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
             </QueueAnim>
           </div>
-          <Modal
-                show={this.state.OnlineModal}
-                modalClosed={() => this.modalHideHandler('online')}>
-                <div styleName="modalContainer">
-                    <span styleName="close" 
-                        onClick={() => this.hideModal('online')} 
-                        style={{cursor:'pointer'}}>
-                        <img src={closeWhite} alt=""/>
-                    </span>
-                    <img src={onlineOnclick} alt=""/>
-                </div>
-          </Modal> 
         </Fragment>
           : null}
       </MediaQuery>
@@ -128,18 +103,6 @@ class Solutions extends Component {
             <div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>
             </QueueAnim>
           </div> 
-          <Modal
-              show={this.state.InStoreModal}
-              modalClosed={() => this.modalHideHandler('instore')}>
-              <div styleName="modalContainer">
-                    <span styleName="close" 
-                      onClick={() => this.hideModal('instore')} 
-                      style={{cursor:'pointer'}}>
-                      <img src={closeWhite} alt=""/>
-                    </span>
-                    <img src={offlineOnclick} alt="" />
-              </div>
-          </Modal>
         </Fragment>
           : null}
     </MediaQuery>
@@ -152,6 +115,7 @@ class Solutions extends Component {
     </MediaQuery>
   </Fragment>
     return (
+      <Fragment>
       <div styleName="container1">
       <span styleName="lato-title">Payment Solutions</span>
       <div styleName="description" className="body">
@@ -180,6 +144,36 @@ class Solutions extends Component {
         </div>
       </div>
     </div>
+        <Modal
+          show={this.state.OnlineModal}
+          modalClosed={() => this.modalHideHandler('online')}
+            >
+          <div styleName="modalContainer">
+              <span styleName="close" 
+                onClick={() => this.modalHideHandler('online')} 
+                style={{cursor:'pointer'}}>
+                <img src={closeWhite} alt=""/>
+              </span>
+            <div styleName="contentContainer">
+              <img src={onlineOnclick} alt=""/>
+            </div>
+          </div>
+        </Modal> 
+        <Modal
+              show={this.state.InStoreModal}
+              modalClosed={() => this.modalHideHandler('instore')}>
+              <div styleName="modalContainer">
+                    <span styleName="close" 
+                      onClick={() => this.modalHideHandler('instore')} 
+                      style={{cursor:'pointer'}}>
+                      <img src={closeWhite} alt=""/>
+                    </span>
+                  <div styleName="contentContainer">
+                    <img src={offlineOnclick} alt="" />
+                  </div>
+              </div>
+          </Modal>
+      </Fragment>
     )
   }
 }

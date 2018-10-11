@@ -1,5 +1,6 @@
 import React,{Component,Fragment} from 'react'
 import MediaQuery from 'react-responsive';
+import Modal from '../../../component/Modal/Modal';
 
 import PaymentIMG from '../images/icon_payment.png';
 import SecurityIMG from '../images/icon_security.png';
@@ -26,12 +27,13 @@ class Cards extends Component {
     extSecurity: false,
     extMedia: false,
     extMarketing: false,
+    modal:false,
   }
 
   mouseenterHandler = (type) => {
     switch (type) {
       case 'payment':
-        this.setState({extPayment: true})
+        this.setState({extPayment: true, modal: true})
         console.log('onmouse enter1')
         break;
       case 'security':

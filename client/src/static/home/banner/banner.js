@@ -1,7 +1,8 @@
 import React from 'react';
-import './banner.css';
 import landingPage from '../images/img_home.jpg';
 import {Link} from 'react-router-dom';
+
+import './banner.css';
 export default () => {
   return (
     <div styleName="banner">
