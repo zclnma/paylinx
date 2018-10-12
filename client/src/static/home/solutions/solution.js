@@ -1,7 +1,7 @@
 import React,{Component,Fragment} from 'react'
-import {Icon} from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import MediaQuery from 'react-responsive';
+import LazyLoad from 'react-lazyload';
 
 import Online from '../images/img_online.jpg';
 import InStore from '../images/img_inStore.jpg';
@@ -55,7 +55,7 @@ class Solutions extends Component {
     let instore = null;
     online = 
     <Fragment>
-      <MediaQuery query="(min-device-width: 501px)">
+      <MediaQuery query="(min-width: 501px)">
       {this.state.OnlineHover ? 
         <Fragment>
           <div 
@@ -75,7 +75,7 @@ class Solutions extends Component {
         </Fragment>
           : null}
       </MediaQuery>
-      <MediaQuery query="(max-device-width: 500px)">
+      <MediaQuery query="(max-width: 500px)">
         <div styleName="shadow">
           <div><img src={onlineIcon} alt='' /></div>
           <div styleName="lato-title">Online</div>
@@ -86,7 +86,7 @@ class Solutions extends Component {
 
   instore = 
     <Fragment>
-    <MediaQuery query="(min-device-width: 501px)">
+    <MediaQuery query="(min-width: 501px)">
       {this.state.InStoreHover ? 
         <Fragment>
           <div 
@@ -106,7 +106,7 @@ class Solutions extends Component {
         </Fragment>
           : null}
     </MediaQuery>
-    <MediaQuery query="(max-device-width: 500px)">
+    <MediaQuery query="(max-width: 500px)">
       <div styleName="shadow">
         <div key="1"><img src={offlineIcon} alt='' /></div>
         <div key="2"styleName="lato-title">In-store</div>
@@ -152,10 +152,12 @@ class Solutions extends Component {
               <span styleName="close" 
                 onClick={() => this.modalHideHandler('online')} 
                 style={{cursor:'pointer'}}>
-                <img src={closeWhite} alt=""/>
+                  <img src={closeWhite} alt=""/>
               </span>
             <div styleName="contentContainer">
-              <img src={onlineOnclick} alt=""/>
+              <LazyLoad once offset={100}>
+                <img src={onlineOnclick} alt=""/>
+              </LazyLoad>
             </div>
           </div>
         </Modal> 
@@ -166,10 +168,12 @@ class Solutions extends Component {
                     <span styleName="close" 
                       onClick={() => this.modalHideHandler('instore')} 
                       style={{cursor:'pointer'}}>
-                      <img src={closeWhite} alt=""/>
+                        <img src={closeWhite} alt=""/>
                     </span>
                   <div styleName="contentContainer">
-                    <img src={offlineOnclick} alt="" />
+                    <LazyLoad>
+                      <img src={offlineOnclick} alt="" />
+                    </LazyLoad>
                   </div>
               </div>
           </Modal>

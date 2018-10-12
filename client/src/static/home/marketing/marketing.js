@@ -42,7 +42,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <MediaQuery query="(min-device-width: 501px)">
+        <MediaQuery query="(min-width: 501px)">
           <div style={{position:'absolute', right:'0', width:'50%',height:'100%',backgroundColor:'rgba(51, 51, 51, 0.5)'}}>
             <div styleName="big-logo">
               <div className="lato-oversize">Exposure</div>
@@ -54,7 +54,7 @@ export default () => {
         <img src={MarketingImg} alt="" />
       </div>
       <div styleName="container">
-        <MediaQuery query="(min-device-width: 501px)">
+        <MediaQuery query="(min-width: 501px)">
           <div style={{position:'absolute', width:'50%',height:'100%',backgroundColor:'rgba(51, 51, 51, 0.5)'}}>
             <div styleName="big-logo">
               <div className="lato-oversize">Exposure</div>

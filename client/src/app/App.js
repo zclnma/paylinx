@@ -2,14 +2,33 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 
+import LazyLoading from '../hoc/lazyLoading';
 import Home from '../static/home/Home';
-import ContactUs from '../static/contactus/ContactUs';
-import CaseStudy from '../static/caseStudy/caseStudy';
-import AboutUs from '../static/aboutus/aboutus';
-import Login from '../static/login/login';
-import Solution from '../static/solution/solution';
+//import ContactUS from '../static/contactus/ContactUs';
+//import CaseStudy from '../static/caseStudy/caseStudy';
+//import AboutUs from '../static/aboutus/aboutus';
+//import Solution from '../static/solution/solution';
+
+const Solution  = LazyLoading(() => {
+    return import('../static/solution/solution');
+});
+
+const AboutUs  = LazyLoading(() => {
+  return import('../static/aboutus/aboutus');
+});
+
+const CaseStudy  = LazyLoading(() => {
+  return import('../static/caseStudy/caseStudy');
+});
+
+const ContactUs  = LazyLoading(() => {
+  return import('../static/contactus/ContactUs');
+});
+
+
 class App extends Component {
   render() {
+    document.title = 'Paylinx'
     let route = (
       <BrowserRouter>
         <Switch>
@@ -18,7 +37,6 @@ class App extends Component {
           <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/solution" component={Solution} />
           <Route exact path="/case-study" component={CaseStudy} />
-          <Route exact path="/login" component={Login} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

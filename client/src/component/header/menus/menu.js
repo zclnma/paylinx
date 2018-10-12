@@ -24,7 +24,7 @@ export default class menu extends Component {
     let color = this.props.color;
     content = 
     <Fragment>
-        <MediaQuery query="(min-device-width: 501px)">
+        <MediaQuery query="(min-width: 501px)">
         {!this.state.showMenus? 
         <div style={{textAlign: 'center'}}>
             <img src={require('../images/' + this.props.image + '.png')} alt="" />
@@ -76,7 +76,7 @@ export default class menu extends Component {
                 </ul>
             </div>}
         </MediaQuery>
-        <MediaQuery query="(max-device-width: 500px)">
+        <MediaQuery query="(max-width: 500px)">
             <div styleName="menu-mobile">
                 <div styleName="orange"></div>
                 <div styleName="lato-subtitle"
@@ -124,7 +124,7 @@ export default class menu extends Component {
 
     return (
         <Fragment>
-            <MediaQuery query="(min-device-width: 501px)">
+            <MediaQuery query="(min-width: 501px)">
                 <div styleName="modal"
                     style={{backgroundColor: color}}
                     onMouseEnter={this.mouseenterHandler}
@@ -132,7 +132,7 @@ export default class menu extends Component {
                     {content}
                 </div>
             </MediaQuery>
-            <MediaQuery query="(max-device-width: 500px)">
+            <MediaQuery query="(max-width: 500px)">
                 <div styleName="modal-mobile"
                     style={{backgroundColor: color}}
                     onMouseEnter={this.mouseenterHandler}

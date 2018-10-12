@@ -63,7 +63,7 @@ class Header extends Component {
                 <div styleName="logo">
                     <Link to="/"><img src={Logo} alt="" /></Link>
                 </div>
-                <MediaQuery query="(min-device-width: 501px)">
+                <MediaQuery query="(min-width: 501px)">
                 {this.props.location.pathname === '/' ? 
                     <div styleName="navItemHome">
                         <div styleName="icon" onClick={this.showModal}> 
@@ -100,7 +100,7 @@ class Header extends Component {
                     </div>
                 }
                 </MediaQuery>
-                <MediaQuery query="(max-device-width: 500px)">
+                <MediaQuery query="(max-width: 500px)">
                 <div styleName="navItem">
                     <div styleName="icon" onClick={this.showModal}> 
                         <img src={MenuIconMobile} alt="" />

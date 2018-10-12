@@ -81,7 +81,7 @@ class Cards extends Component {
 
     payment = 
     <Fragment>
-      <MediaQuery query="(min-device-width: 501px)">
+      <MediaQuery query="(min-width: 501px)">
         {!this.state.extPayment ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('payment')}>
@@ -108,7 +108,7 @@ class Cards extends Component {
         </div>
     </div>}
     </MediaQuery>
-    <MediaQuery query="(max-device-width: 500px)">
+    <MediaQuery query="(max-width: 500px)">
     <div styleName="card">
         <div styleName="orange"></div>
         <div styleName="lato-title">Payment</div>
@@ -131,7 +131,7 @@ class Cards extends Component {
     </Fragment>
     security = 
     <Fragment>
-    <MediaQuery query="(min-device-width: 501px)">
+    <MediaQuery query="(min-width: 501px)">
     {!this.state.extSecurity ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('security')}>
@@ -158,7 +158,7 @@ class Cards extends Component {
         </div>
     </div>}
     </MediaQuery>
-    <MediaQuery query="(max-device-width: 500px)">
+    <MediaQuery query="(max-width: 500px)">
     <div styleName="card">
         <div styleName="orange"></div>
         <div styleName="lato-title">Security</div>
@@ -181,7 +181,7 @@ class Cards extends Component {
     </Fragment>
     media = 
     <Fragment>
-    <MediaQuery query="(min-device-width: 501px)">
+    <MediaQuery query="(min-width: 501px)">
     {!this.state.extMedia ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('media')}>
@@ -208,7 +208,7 @@ class Cards extends Component {
         </div>
     </div>}
     </MediaQuery>
-    <MediaQuery query="(max-device-width: 500px)">
+    <MediaQuery query="(max-width: 500px)">
     <div styleName="card">
         <div styleName="orange"></div>
         <div styleName="lato-title">Media</div>
@@ -231,7 +231,7 @@ class Cards extends Component {
     </Fragment>
     marketing = 
     <Fragment>
-    <MediaQuery query="(min-device-width: 501px)">
+    <MediaQuery query="(min-width: 501px)">
     {!this.state.extMarketing ? 
       <div styleName="card"
           onMouseEnter = {() =>this.mouseenterHandler('marketing')}>
@@ -258,7 +258,7 @@ class Cards extends Component {
         </div>
     </div>}
     </MediaQuery>
-    <MediaQuery query="(max-device-width: 500px)">
+    <MediaQuery query="(max-width: 500px)">
     <div styleName="card">
         <div styleName="orange"></div>
         <div styleName="lato-title">Marketing</div>
