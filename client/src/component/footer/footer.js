@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Popover} from 'antd';
 import {NavHashLink as Link} from 'react-router-hash-link';
+import MediaQuery from 'react-responsive';
 
 import MenuList from '../menus';
 import wechatQR from './images/wechatQR.png';
@@ -9,7 +10,6 @@ import facebook from './images/icon_socialMedia-08.png';
 import linkedin from './images/icon_socialMedia-09.png';
 import twitter from './images/icon_socialMedia-10.png';
 import ins from './images/icon_socialMedia-11.png';
-import copyright from './images/copyright.png';
 
 import './footer.css';
 
@@ -46,6 +46,7 @@ export default class footer extends Component {
                 </div>
             </div>
             <hr style={{color: '#a0a0a0'}}/>
+            <MediaQuery query="(min-width: 501px)">
             <div styleName="section-bottom">
                 <div styleName="menu">
                     <Link 
@@ -154,9 +155,31 @@ export default class footer extends Component {
                     </ul>
                 </div>
             </div>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 501px)">
+            {Object.keys(MenuList).map((key,index) => {
+                return MenuList[key].title === 'LOG IN' ?  
+                <a 
+                    key={index} 
+                    href={MenuList[key].link}
+                    styleName="link"
+                    className="lato-subtitle"
+                    rel="noopener noreferrer" target="_blank">
+                        {MenuList[key].title}
+                </a> :
+                    <Link
+                    key={index} 
+                    to={MenuList[key].link}
+                    styleName="link"
+                    className="lato-subtitle"
+                    onClick={this.scrollToTop}>
+                        {MenuList[key].title}|
+                    </Link>                
+            })}
+            </MediaQuery>
             <div styleName="disclaimer">
                 <Link 
-                    to='/'
+                    to='/privacy-policy'
                     styleName="link"
                     className="lato-ssubtitle">
                     Privacy Policy

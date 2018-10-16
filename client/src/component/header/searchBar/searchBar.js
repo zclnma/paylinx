@@ -1,10 +1,9 @@
 import React from 'react';
-import { Collapse, Input } from 'antd';
+import { Collapse} from 'antd';
 import FAQfiles from './FAQ';
 import './searchBar.css';
 
 const Panel = Collapse.Panel;
-const Search = Input.Search;
 
 export default () => {
     let faq = null;

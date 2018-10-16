@@ -14,7 +14,6 @@ export default () => {
 
   return (
     <div styleName="banner" id='location'>
-        <img src={map} alt=""/>
         <div styleName="bannerInfo">
           <div styleName="contentcontainer">
           <div styleName="orange"></div>
@@ -51,6 +50,7 @@ export default () => {
             </div>
           </div>
         </div>
+        <img src={map} alt=""/>
 </div>
   )
 }

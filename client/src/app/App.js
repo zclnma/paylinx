@@ -25,6 +25,10 @@ const ContactUs  = LazyLoading(() => {
   return import('../static/contactus/ContactUs');
 });
 
+const Privacy = LazyLoading(() => {
+  return import('../static/privacy/privacy')
+})
+
 
 class App extends Component {
   render() {
@@ -37,6 +41,7 @@ class App extends Component {
           <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/solution" component={Solution} />
           <Route exact path="/case-study" component={CaseStudy} />
+          <Route exact path="/privacy-policy" component={Privacy} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

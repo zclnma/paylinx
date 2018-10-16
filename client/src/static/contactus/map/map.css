@@ -88,10 +88,10 @@
     }
     .icons {
         padding-bottom: 30px;
+        padding-left: auto;
+        padding-right: auto;
     }
     .icons img{
-        margin-left: auto;
-        margin-right: auto;
         width: 80px;
     }
     .lato-subtitle {

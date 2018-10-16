@@ -5,7 +5,7 @@ import Footer from '../../component/footer/footer';
 import Banner from './banner/banner';
 import Form from './form/form';
 import Map from './map/map';
-import {Layout,Card} from 'antd';
+import {Layout} from 'antd';
 
 const {Content} = Layout;
 
@@ -16,7 +16,8 @@ export default () => {
         <Content >
           <Banner />
           <div styleName="form">
-            <div style={{textAlign: 'center', marginTop:'30px', marginBottom:'30px'}} styleName="lato-title">GET IN TOUCH</div>
+            <div style={{textAlign: 'center',marginBottom:'5px'}} styleName="lato-title">We’d love to hear from you!</div>
+            <div style={{textAlign: 'center',marginBottom:'10px'}} className="body">Fill in the form below and we’ll get back to you within 24 hours.</div>
             <Form />
           </div>
           <Map />

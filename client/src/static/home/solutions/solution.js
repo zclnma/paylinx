@@ -1,7 +1,6 @@
 import React,{Component,Fragment} from 'react'
 import QueueAnim from 'rc-queue-anim';
 import MediaQuery from 'react-responsive';
-import LazyLoad from 'react-lazyload';
 
 import Online from '../images/img_online.jpg';
 import InStore from '../images/img_inStore.jpg';
@@ -155,9 +154,7 @@ class Solutions extends Component {
                   <img src={closeWhite} alt=""/>
               </span>
             <div styleName="contentContainer">
-              <LazyLoad once offset={100}>
                 <img src={onlineOnclick} alt=""/>
-              </LazyLoad>
             </div>
           </div>
         </Modal> 
@@ -171,9 +168,7 @@ class Solutions extends Component {
                         <img src={closeWhite} alt=""/>
                     </span>
                   <div styleName="contentContainer">
-                    <LazyLoad>
                       <img src={offlineOnclick} alt="" />
-                    </LazyLoad>
                   </div>
               </div>
           </Modal>

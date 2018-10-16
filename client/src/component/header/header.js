@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component} from 'react'
 import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom';
 import {Menu, Dropdown} from 'antd';
@@ -11,10 +11,10 @@ import MenuList from '../menus';
 import close from './images/icon_close.png';
 import closeWhite from './images/icon_closeWhite.png';
 import Logo from './images/logo_orange.png';
-import MenuIcon from './images/icon_burgerMenu4.png';
+import MenuIcon from './images/icon_burgerMenu.png';
 import MenuIconMobile from './images/icon_burgerMenu.png';
 import SearchIcon from './images/icon_search.png';
-import UserIcon from './images/icon_user2.png';
+import UserIcon from './images/icon_user.png';
 import Menus from './menus/menu';
 
 import './header.css';

@@ -53,18 +53,20 @@ export default class menu extends Component {
                     return   <QueueAnim>
                                 {
                                     this.props.title === "LOG IN" ? 
-                                    <li key={index}
+                                    <li 
                                         onClick={this.props.closed}>
-                                        <a  className="lato-ssubtitle"
+                                        <a  key={index}
+                                            className="lato-ssubtitle"
                                             styleName="link" 
                                             href={menu.link}
                                             rel="noopener noreferrer" target="_blank">
                                             {menu.value}
                                         </a>
                                     </li> :
-                                    <li key={index}
+                                    <li 
                                         onClick={this.props.closed}>
-                                        <Link to={[this.props.link,menu.htag].join('')} 
+                                        <Link key={index}
+                                            to={[this.props.link,menu.htag].join('')} 
                                             className="lato-ssubtitle" 
                                             styleName="link">
                                             {menu.value}

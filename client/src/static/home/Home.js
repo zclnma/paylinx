@@ -8,7 +8,7 @@ import WechatPay from './images/logo_WeChat Pay.png';
 import Cards from './cards/cards';
 import Solutions from './solutions/solution';
 import Marketing from './marketing/marketing';
-import LazyLoad from 'react-lazyload';
+//import LazyLoad from 'react-lazyload';
 
 import './Home.css';
 import {Layout} from 'antd';

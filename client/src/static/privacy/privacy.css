@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.lato-title {
+    composes: global lato-title from global;
+    color: black;
+}
+

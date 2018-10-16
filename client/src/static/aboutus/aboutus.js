@@ -7,7 +7,7 @@ import Services from './iconBar/iconBar';
 import Change from './images/icon_change.png';
 import Security from './images/icon_security.png';
 import Premium from './images/icon_premium.png';
-import {Layout, Card} from 'antd';
+import {Layout} from 'antd';
 
 const {Content} = Layout;
 

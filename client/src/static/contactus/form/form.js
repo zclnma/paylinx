@@ -1,8 +1,10 @@
 import React from 'react';
-import { Form, Input, Row, Col, Button,  } from 'antd';
-
+import { Form, Input, Row, Col, Button, Select, message} from 'antd';
+import MediaQuery from 'react-responsive';
+import axios from 'axios';
 import './form.css';
 const FormItem = Form.Item;
+const Option = Select.Option;
 //const AutoCompleteOption = AutoComplete.Option;
 
 class RegistrationForm extends React.Component {
@@ -16,6 +18,24 @@ class RegistrationForm extends React.Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        const data = {
+          name: values.name,
+          company: values.company,
+          email: values.email,
+          industry: values.industry,
+          prefix: values.prefix,
+          number: values.number,
+          message: values.message,
+        }
+        axios.post('/api/email', data)  
+          .then(res => {
+            if (res.status === 400) {
+              Promise.reject(res);
+              return message.error('Something went wrong. Please try again later');
+            }
+            return message.success('Success')
+          })
+          .catch(err => message.error('Something went wrong. Please try again later'))
       }
     });
   }
@@ -25,44 +45,17 @@ class RegistrationForm extends React.Component {
     this.setState({ confirmDirty: this.state.confirmDirty || !!value });
   }
 
-
-  handleWebsiteChange = (value) => {
-    let autoCompleteResult;
-    if (!value) {
-      autoCompleteResult = [];
-    } else {
-      autoCompleteResult = ['.com', '.org', '.net'].map(domain => `${value}${domain}`);
-    }
-    this.setState({ autoCompleteResult });
-  }
-
   render() {
     const { getFieldDecorator } = this.props.form;
-    //const { autoCompleteResult } = this.state;
 
-    // const formItemLayout = {
-    //   labelCol: {
-    //     xs: { span: 24 },
-    //     sm: { span: 8 },
-    //   },
-    //   wrapperCol: {
-    //     xs: { span: 24 },
-    //     sm: { span: 16 },
-    //   },
-    // };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0,
-        },
-        sm: {
-          span: 16,
-          offset: 10,
-        },
-      },
-    };
-
+    const prefixSelector = getFieldDecorator('prefix', {
+      initialValue: '61',
+    })(
+      <Select style={{ width: 70 }}>
+        <Option value="61">+61</Option>
+        <Option value="86">+86</Option>
+      </Select>
+    );
     // const websiteOptions = autoCompleteResult.map(website => (
     //   <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
     // ));
@@ -70,15 +63,14 @@ class RegistrationForm extends React.Component {
     return (
       <div id='form'>
       <Form onSubmit={this.handleSubmit}>
-      <Row gutter={2}>
-            <Col span={12}>
+      <MediaQuery query='(min-width:501px)'>
+      <Row gutter={4 }>
+          <Col span={12}>
         <FormItem
           label="Name"
         >
           {getFieldDecorator('name', {
-            rules: [{
-              type: 'name', message: 'The input is not valid name!',
-            }, {
+            rules: [ {
               required: true, message: 'Please input your name!',
             }],
           })(
@@ -104,7 +96,10 @@ class RegistrationForm extends React.Component {
           label="Email"
         >
           {getFieldDecorator('email', {
-            rules: [{ required: true, message: 'Please input your email!' }],
+            rules: [{
+              type: 'email', message: 'The input is not valid E-mail!',
+            },
+            { required: true, message: 'Please input your email!' }],
           })(
             <Input style={{ width: '100%' }} />
           )}
@@ -114,14 +109,58 @@ class RegistrationForm extends React.Component {
         <FormItem
           label="Phone Number"
         >
-          {getFieldDecorator('phone number', {
+          {getFieldDecorator('number', {
             rules: [{ required: true, message: 'Please input phone number!' }],
           })(
-              <Input />
+              <Input addonBefore={prefixSelector}/>
           )}
         </FormItem>
         </Col>
         </Row>
+      </MediaQuery>
+      <MediaQuery query='(max-width:500px)'>
+        <FormItem
+          label="Name"
+        >
+          {getFieldDecorator('name', {
+            rules: [ {
+              required: true, message: 'Please input your name!',
+            }],
+          })(
+            <Input />
+          )}
+        </FormItem>
+        <FormItem
+          label="Company"
+        >
+          {getFieldDecorator('company', {
+            rules: [{ required: true, message: 'Please input your company!', whitespace: true }],
+          })(
+            <Input />
+          )}
+        </FormItem>
+        <FormItem
+          label="Email"
+        >
+          {getFieldDecorator('email', {
+            rules: [{
+              type: 'email', message: 'The input is not valid E-mail!',
+            },
+            { required: true, message: 'Please input your email!' }],
+          })(
+            <Input style={{ width: '100%' }} />
+          )}
+        </FormItem>
+        <FormItem
+          label="Phone Number"
+        >
+          {getFieldDecorator('number', {
+            rules: [{ required: true, message: 'Please input phone number!' }],
+          })(
+              <Input addonBefore={prefixSelector}/>
+          )}
+        </FormItem>
+      </MediaQuery>
         <FormItem
           label="Industry"
         >
@@ -134,15 +173,15 @@ class RegistrationForm extends React.Component {
         <FormItem
           label="Message"
         >
-              {getFieldDecorator('industry', {
+              {getFieldDecorator('message', {
                 rules: [{ required: true, message: 'Please input the Industry you got!' }],
               })(
                 <Input.TextArea rows={4} />
               )}
         </FormItem>
-        <FormItem {...tailFormItemLayout}>
+        <div style={{textAlign:'center'}}>
           <Button type="primary" htmlType="submit">Submit</Button>
-        </FormItem>
+        </div>
       </Form>
       </div>
     );
