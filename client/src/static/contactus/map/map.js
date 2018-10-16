@@ -44,8 +44,8 @@ export default () => {
                 <span > <img src={sm2} alt="" /></span>     
                 <span ><a href='https://www.facebook.com/paylinx/' rel="noopener noreferrer" target="_blank"><img src={sm3} alt="" /></a></span>   
                 <span ><a href='https://twitter.com/marketpaylinx?lang=en' rel="noopener noreferrer" target="_blank"><img src={sm5} alt="" /></a></span>
-                <span ><a href='https://www.instagram.com/paylinxau/?hl=en' rel="noopener noreferrer" target="_blank"><img src={sm4} alt="" /></a></span>
-                <span ><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/' rel="noopener noreferrer" target="_blank"><img src={sm6} alt="" /></a></span>
+                <span ><a href='https://www.instagram.com/paylinxau/?hl=en' rel="noopener noreferrer" target="_blank"><img src={sm6} alt="" /></a></span>
+                <span ><a href='https://www.linkedin.com/company/paylinx-%E9%A2%86%E5%AE%A2%E6%94%AF%E4%BB%98/' rel="noopener noreferrer" target="_blank"><img src={sm4} alt="" /></a></span>
               </div>
             </div>
           </div>

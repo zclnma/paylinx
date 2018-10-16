@@ -64,7 +64,7 @@ class RegistrationForm extends React.Component {
       <div id='form'>
       <Form onSubmit={this.handleSubmit}>
       <MediaQuery query='(min-width:501px)'>
-      <Row gutter={4 }>
+      <Row gutter={2}>
           <Col span={12}>
         <FormItem
           label="Name"
@@ -90,7 +90,7 @@ class RegistrationForm extends React.Component {
         </FormItem>
         </Col>
         </Row>
-        <Row gutter={4}>
+        <Row gutter={2}>
             <Col span={12}>
         <FormItem
           label="Email"
@@ -165,7 +165,7 @@ class RegistrationForm extends React.Component {
           label="Industry"
         >
               {getFieldDecorator('industry', {
-                rules: [{ required: true, message: 'Please input the Industry you got!' }],
+                rules: [{ required: true, message: 'Please input the Industry!' }],
               })(
                 <Input />
               )}
@@ -174,7 +174,7 @@ class RegistrationForm extends React.Component {
           label="Message"
         >
               {getFieldDecorator('message', {
-                rules: [{ required: true, message: 'Please input the Industry you got!' }],
+                rules: [{ required: true, message: 'Please input the message!' }],
               })(
                 <Input.TextArea rows={4} />
               )}
