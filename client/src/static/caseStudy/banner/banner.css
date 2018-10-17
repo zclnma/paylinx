@@ -19,8 +19,13 @@
 }
 
 .orange {
-    border: 3px solid orange;
+    border-bottom: 5px solid orange;
     width: 50px;
+}
+
+.body {
+    composes: body from global;
+    color: white;
 }
 
 @media (max-width: 500px) {
@@ -38,9 +43,4 @@
         left: 380px;
         top: 450px;
     }
-}
-
-.body {
-    composes: body from global;
-    color: white;
 }

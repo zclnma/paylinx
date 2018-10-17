@@ -15,7 +15,7 @@ export default () => {
               <div styleName="lato-cover-thin">TO BE</div>
               <div styleName="lato-cover">CHINA READY</div>
               <div styleName="getInTouchContainer">
-                <div styleName="getInTouch"><Link to='/contact-us' style={{ color:'white'}}> GET STARTED</Link></div>
+                <div styleName="getInTouch"><Link to='/contact-us' style={{color:'white'}}className="lato-ssubtitle"> GET STARTED</Link></div>
               </div>
             </div>
           </div>

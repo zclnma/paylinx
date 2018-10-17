@@ -29,13 +29,13 @@
 .lato-cover {
     composes: global lato-cover from global;
     font-size: 18px;
-    line-height: 24px
+    line-height: 22px
 }
 .lato-cover-thin {
     composes: global lato-cover from global;
     font-weight: 300;
     font-size: 18px;
-    line-height: 24px
+    line-height: 22px
 }
 .shadowCircle {
     position: absolute;
@@ -78,10 +78,6 @@
 
 .getInTouch {
     margin:auto;
- 
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
 }
 
 .getInTouchContainer:hover {

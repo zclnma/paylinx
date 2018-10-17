@@ -1,6 +1,6 @@
 import React from 'react'
 import './tailor.css';
-import tailor from '../images/img_tailorMade.jpg';
+import tailor from '../images/img_tailor.png';
 export default () => {
   return (
     <div styleName="container" id='tailor'>

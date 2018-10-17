@@ -33,7 +33,7 @@ export default class footer extends Component {
                     <div styleName="lato-oversize">1300 03 12 83</div>
                 </div>
                 <div styleName="follow">
-                    <div styleName="lato-subtitle">FOLLOW US ON</div>
+                    <div style={{marginLeft:'15px'}}styleName="lato-subtitle">FOLLOW US ON</div>
                     <div styleName="icons">
                         <span styleName="icon"> <Popover content={content}>
                             <img src={wechat} alt="" />
@@ -62,7 +62,7 @@ export default class footer extends Component {
                                     <Link
                                     to={[MenuList.aboutUs.link, me.htag].join('')} 
                                     styleName="link"
-                                    className="lato-ssubtitle">
+                                    className="body">
                                         {me.value}
                                     </Link>
                                 </li>
@@ -83,7 +83,7 @@ export default class footer extends Component {
                                 <Link
                                     to={[MenuList.solution.link, me.htag].join('')} 
                                     styleName="link"
-                                    className="lato-ssubtitle">
+                                    className="body">
                                     {me.value}
                                     </Link>
                                 </li>
@@ -104,7 +104,7 @@ export default class footer extends Component {
                             <Link 
                                 to={[MenuList.contactUs.link, me.htag].join('')} 
                                 styleName="link"
-                                className="lato-ssubtitle">
+                                className="body">
                                 {me.value}
                                 </Link>
                             </li>
@@ -125,7 +125,7 @@ export default class footer extends Component {
                             <Link 
                                 to={[MenuList.caseStudy.link, me.htag].join('')} 
                                 styleName="link"
-                                className="lato-ssubtitle">
+                                className="body">
                                 {me.value}
                                 </Link>
                             </li>
@@ -146,7 +146,7 @@ export default class footer extends Component {
                             <a
                                 href={me.link}
                                 styleName="link"
-                                className="lato-ssubtitle"
+                                className="body"
                                 rel="noopener noreferrer" target="_blank">
                                 {me.value}
                             </a>

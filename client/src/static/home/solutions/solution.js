@@ -68,7 +68,7 @@ class Solutions extends Component {
                 { opacity: [1, 0], translateY: [0, -100] }]}>
               <div key="1"><img src={onlineIcon} alt='' /></div>
               <div key="2" styleName="lato-title">Online</div>
-              <div key="3" styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>
+              {/*<div key="3" styleName="lato-subtitle">Start accepting payments online to boost your business among Chinese</div>*/}
             </QueueAnim>
           </div>
         </Fragment>
@@ -99,7 +99,7 @@ class Solutions extends Component {
                 { opacity: [1, 0], translateY: [0, -100] }]}>
             <div key="1"><img src={offlineIcon} alt='' /></div>
             <div key="2"styleName="lato-title">In-store</div>
-            <div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>
+            {/*<div key="3"styleName="lato-subtitle">Be present on the Chinese mindsets accepting their prefered payment options</div>*/}
             </QueueAnim>
           </div> 
         </Fragment>

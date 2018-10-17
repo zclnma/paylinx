@@ -45,10 +45,10 @@ const menus = {
         link: "/case-study",
         color: "#707070",
         menu: [
-            {
-                value: "Merchants",
-                htag: "#case",  
-            },
+            //{
+            //    value: "Merchants",
+            //    htag: "#case",  
+            //},
             {
                 value: "Testimonies",
                 htag: "#testimonies"

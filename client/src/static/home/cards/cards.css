@@ -2,7 +2,7 @@
     align-items: center;
     margin-top: 28px;
     padding-bottom: 59px;
-    width: 90%;
+    width: 95%;
     margin:auto;
     display: flex;
     background-color: #F8F8F8;
@@ -28,7 +28,7 @@
 
 .card:hover {
     transition: 0.3s;
-    width: 246px;
+    width: 280px;
     position: relative;
 }
 
@@ -43,8 +43,9 @@
 .icons {
     position: relative;
     display: flex;
-    width: 100%;
-    margin-top: 0px;
+    margin: auto;
+    width: 95%;
+    margin-top: 10px;
     text-align: center;
 }
 

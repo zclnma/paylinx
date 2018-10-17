@@ -46,14 +46,14 @@ class Header extends Component {
     const userMenu = (
         <Menu >
             <Menu.Item key="0">
-            <a style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/merchant/login?returnUrl=http%3A%2F%2Fpaylinx.cn%2Fmerchant%3F">Merchant Login</a>
+            <a rel="noopener noreferrer" target="_blank" style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/merchant/login?returnUrl=http%3A%2F%2Fpaylinx.cn%2Fmerchant%3F">Merchant Login</a>
             </Menu.Item>
             <Menu.Divider />
             <Menu.Item key="3">
-            <a style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/index.html">API Documents (CN)</a>
+            <a rel="noopener noreferrer" target="_blank" style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/index.html">API Documents (CN)</a>
             </Menu.Item>
             <Menu.Item key="4">
-            <a style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/en/index.html">API Documents (EN)</a>
+            <a rel="noopener noreferrer" target="_blank" style={{ color:'rgba(0, 0, 0, 0.65)'}} href="http://paylinx.cn/doc/en/index.html">API Documents (EN)</a>
             </Menu.Item>
         </Menu>
     );

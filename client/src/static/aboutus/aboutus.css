@@ -11,6 +11,10 @@
     width: 100px;
 }
 
+.first-paragraph {
+    margin-top: 10px
+}
+
 .orange {
     margin:auto;
     border-bottom: 3px solid orange;

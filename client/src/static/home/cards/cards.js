@@ -26,13 +26,12 @@ class Cards extends Component {
     extSecurity: false,
     extMedia: false,
     extMarketing: false,
-    modal:false,
   }
 
   mouseenterHandler = (type) => {
     switch (type) {
       case 'payment':
-        this.setState({extPayment: true, modal: true})
+        this.setState({extPayment: true})
         console.log('onmouse enter1')
         break;
       case 'security':
@@ -93,12 +92,12 @@ class Cards extends Component {
         <div styleName="lato-title">Payment</div>
         <div styleName="icons">
           <div styleName="icon">
-            <img src={Paymentcost} alt="" />
-            <div className="body">Cost effective</div>
-          </div>
-          <div styleName="icon">
             <img src={Paymentrate} alt="" />
             <div className="body">Lower rate than international credit cards</div>
+          </div>
+          <div styleName="icon">
+            <img src={Paymentcost} alt="" />
+            <div className="body">Cost effective</div>
           </div>
           <div styleName="icon">
             <img src={Paymentsettlement} alt="" />

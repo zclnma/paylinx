@@ -21,7 +21,7 @@ export default () => {
         <div style={{backgroundColor:'white',width:'100%'}} id='industry'>
           <div styleName="container">
             <div style={{textAlign:"center"}} styleName="lato-title">Industries we service</div>
-            <div className="body">Let us help you bring your brand to life by providing your business with the tools to Attract, Engage, and Convert your products and services into real dollars. Speak to Paylinx today about how we can connect your business to the WeChat and Alipay ecosystems. Nowhere else in the marketplace will you be able to access such a unique offering as the Paylinx solution, providing Australian businesses with the opportunity to create a platform of engagement linking it to the Chinese consumer.</div>
+            <div styleName="first-paragraph" className="body">Let us help you bring your brand to life by providing your business with the tools to Attract, Engage, and Convert your products and services into real dollars. Speak to Paylinx today about how we can connect your business to the WeChat and Alipay ecosystems. Nowhere else in the marketplace will you be able to access such a unique offering as the Paylinx solution, providing Australian businesses with the opportunity to create a platform of engagement linking it to the Chinese consumer.</div>
               <Services />
             <div className="body">Paylinx can also offer your business a unique opportunity to develop your Chinese client base with a social media reach comprising of up to 200 partner media channels in China, accompanied with our in-house social media resources currently reaching more than 600,000 Chinese in Australia to further enhance your brand's presence in the marketplace.</div>
           </div>
@@ -29,8 +29,10 @@ export default () => {
         <div styleName="container" id='story'>
           <div style={{textAlign:'center'}} styleName="lato-title" >Our Story</div>
           <div>
-            <div className="body">The Paylinx group with its offices in Melbourne and Sydney was founded in January 2016 to complement the robust relationship that founders Kaixuan (Tony) Shu and Qiao (Joseph) Zhang had already forged with Tencent (WeChat’s parent company) as the individuals responsible on behalf of the Chinese behemoth to introduce WeChat to the Australian market in 2012.</div>
+            <div styleName="first-paragraph" className="body">The Paylinx group with its offices in Melbourne and Sydney was founded in January 2016 to complement the robust relationship that founders Kaixuan (Tony) Shu and Qiao (Joseph) Zhang had already forged with Tencent (WeChat’s parent company) as the individuals responsible on behalf of the Chinese behemoth to introduce WeChat to the Australian market in 2012.</div>
+            <br></br>
             <div className="body">Paylinx to date has secured licenses with WeChat Pay and Alipay and is an acquirer of these services to Australian merchants who wish to avail themselves of the opportunities through the payment platforms. Paylinx also provides merchants with access to the implementation within their business of a “Registered and Verified Official Service Account” and a “Mini-Program” providing for a life-long relationship with the customer in your Australian Legal Entities name without the need for Chinese companies to act on your behalf.</div>
+            <br></br>
             <div className="body">Today, we are proud that our offering is the only one of its kind available in the Australian marketplace incorporating a payment and digital solution that link to provide the best customer engagement platform to our merchant base.</div>
           </div>
         </div>

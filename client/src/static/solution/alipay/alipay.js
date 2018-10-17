@@ -1,8 +1,8 @@
 import React from 'react'
 import './alipay.css';
 import Alipay from '../images/logo_Alipay.png';
-import Merchants from '../images/img_logos.jpg';
-import Ali from '../images/img_alipay.jpg';
+import Merchants from '../images/img_logos.png';
+import Ali from '../images/img_discovery.png';
 export default () => {
   return (
     <div styleName="container" id='alipay'>
