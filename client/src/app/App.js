@@ -3,11 +3,12 @@ import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 
 import LazyLoading from '../hoc/lazyLoading';
+import Solution from '../static/solution/solution';
 import Home from '../static/home/Home';
 
-const Solution  = LazyLoading(() => {
-    return import('../static/solution/solution');
-});
+//const Solution  = LazyLoading(() => {
+//    return import('../static/solution/solution');
+//});
 
 const AboutUs  = LazyLoading(() => {
   return import('../static/aboutus/aboutus');
