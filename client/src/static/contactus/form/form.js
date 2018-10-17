@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, Row, Col, Button, Select, message} from 'antd';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
-import './form.css';
+
 const FormItem = Form.Item;
 const Option = Select.Option;
 //const AutoCompleteOption = AutoComplete.Option;
@@ -124,7 +124,7 @@ class RegistrationForm extends React.Component {
         >
           {getFieldDecorator('name', {
             rules: [ {
-              required: true, message: 'Please input your name!',
+              required: true, message: 'Please input your name.',
             }],
           })(
             <Input />
@@ -134,7 +134,7 @@ class RegistrationForm extends React.Component {
           label="Company"
         >
           {getFieldDecorator('company', {
-            rules: [{ required: true, message: 'Please input your company!', whitespace: true }],
+            rules: [{ required: true, message: 'Please input your company.', whitespace: true }],
           })(
             <Input />
           )}
@@ -144,9 +144,9 @@ class RegistrationForm extends React.Component {
         >
           {getFieldDecorator('email', {
             rules: [{
-              type: 'email', message: 'The input is not valid E-mail!',
+              type: 'email', message: 'The input is not valid E-mail.',
             },
-            { required: true, message: 'Please input your email!' }],
+            { required: true, message: 'Please input your E-mail.' }],
           })(
             <Input style={{ width: '100%' }} />
           )}
@@ -155,7 +155,7 @@ class RegistrationForm extends React.Component {
           label="Phone Number"
         >
           {getFieldDecorator('number', {
-            rules: [{ required: true, message: 'Please input phone number!' }],
+            rules: [{ required: true, message: 'Please input phone number.' }],
           })(
               <Input addonBefore={prefixSelector}/>
           )}
@@ -165,7 +165,7 @@ class RegistrationForm extends React.Component {
           label="Industry"
         >
               {getFieldDecorator('industry', {
-                rules: [{ required: true, message: 'Please input the Industry!' }],
+                rules: [{ required: true, message: 'Please input the Industry.' }],
               })(
                 <Input />
               )}
@@ -174,7 +174,7 @@ class RegistrationForm extends React.Component {
           label="Message"
         >
               {getFieldDecorator('message', {
-                rules: [{ required: true, message: 'Please input the message!' }],
+                rules: [{ required: true, message: 'Please input the message.' }],
               })(
                 <Input.TextArea rows={4} />
               )}

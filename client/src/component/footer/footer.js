@@ -184,8 +184,8 @@ export default class footer extends Component {
                     className="lato-ssubtitle">
                     Privacy Policy
                 </Link>
+                <div styleName="copyright" className="lato-ssubtitle">Copyright © 2018 Paylinx Pty Ltd. All rights reserved.</div>
             </div>
-            <span styleName="copyright" className="lato-ssubtitle">Copyright © 2018 Paylinx Pty Ltd. All rights reserved.</span>
         </div>
       </div>
     )

@@ -4,10 +4,6 @@ import './App.css';
 
 import LazyLoading from '../hoc/lazyLoading';
 import Home from '../static/home/Home';
-//import ContactUS from '../static/contactus/ContactUs';
-//import CaseStudy from '../static/caseStudy/caseStudy';
-//import AboutUs from '../static/aboutus/aboutus';
-//import Solution from '../static/solution/solution';
 
 const Solution  = LazyLoading(() => {
     return import('../static/solution/solution');

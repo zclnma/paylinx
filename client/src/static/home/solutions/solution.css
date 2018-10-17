@@ -52,7 +52,7 @@
     width: 20px;
     position: absolute;
     right: 40px;
-    top: 40px; 
+    top: 0px; 
     z-index: 1;
 }
 
@@ -74,14 +74,13 @@
 }
 
 .modalContainer {
-    height: 80%;
     width: 80%;
     margin: auto;
 }
 
 .contentContainer img{
     width: 600px;
-    height: 400px;
+    height: auto;
 }
 
 

@@ -50,10 +50,11 @@ export default class menu extends Component {
                     </div>
                 <ul>            
                 {this.props.data.map((menu, index) =>{
-                    return   <QueueAnim>
+                    return   <QueueAnim key={index}>
                                 {
                                     this.props.title === "LOG IN" ? 
                                     <li 
+                                        key={index}
                                         onClick={this.props.closed}>
                                         <a  key={index}
                                             className="lato-ssubtitle"
@@ -64,6 +65,7 @@ export default class menu extends Component {
                                         </a>
                                     </li> :
                                     <li 
+                                        key={index}
                                         onClick={this.props.closed}>
                                         <Link key={index}
                                             to={[this.props.link,menu.htag].join('')} 

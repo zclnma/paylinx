@@ -26,14 +26,18 @@ app.post('/api/email',(req,res) => {
 
     let mailOptions = {
         from: req.body.email, // sender address
-        to: 'chinazzk94@gmail.com', // list of receivers
+        to: 'mel@paylinx.com.au', // list of receivers
         subject: 'PayLinx Website Enquery', // Subject line
         text: `Hi PayLinx,
-            I'm ${req.body.name} from ${req.body.company} in ${req.body.industry} industry
-            ${req.body.message}
-            Cheers,
-            ${req.body.name}`, // plain text body
 
+        Name: ${req.body.name}
+        Email: ${req.body.email}
+        Company: ${req.body.company}
+        Industry:${req.body.industry} industry.
+        Message:${req.body.message}
+
+        Cheers,
+        ${req.body.name}`, // plain text body
     };
 
     // send mail with defined transport object
