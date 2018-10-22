@@ -41,6 +41,7 @@
     "rc-queue-anim": "^1.6.5",
     "rc-tween-one": "^2.2.7",
     "react": "^16.4.2",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.4.2",
     "react-lazyload": "^2.3.0",

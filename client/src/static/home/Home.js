@@ -1,5 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive'
+import LazyLoad from 'react-lazyload';
+
 import Banner from './banner/banner';
 import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
@@ -8,7 +10,6 @@ import WechatPay from './images/logo_WeChat Pay.png';
 import Cards from './cards/cards';
 import Solutions from './solutions/solution';
 import Marketing from './marketing/marketing';
-//import LazyLoad from 'react-lazyload';
 
 import './Home.css';
 import {Layout} from 'antd';
@@ -41,10 +42,14 @@ export default class App extends React.Component {
                 We are proud that our offering is the only one of its kind available in the Australian marketplace incorporating a payment and digital solution.
               </div>
             </MediaQuery>
-            <Cards />
+            <LazyLoad>
+              <Cards />
+            </LazyLoad>
           </div>
           <Solutions />
-          <Marketing />
+          <LazyLoad>
+            <Marketing />
+          </LazyLoad>
         </Content>
         <Footer />
       </Layout>
