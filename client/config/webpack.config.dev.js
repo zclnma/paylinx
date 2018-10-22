@@ -14,10 +14,10 @@ const paths = require('./paths');
 const postcssAspectRatioMini = require('postcss-aspect-ratio-mini');
 const postcssPxToViewport = require('postcss-px-to-viewport');
 const postcssWriteSvg = require('postcss-write-svg');
-const postcssCssnext = require('postcss-cssnext');
+//const postcssCssnext = require('postcss-cssnext');
+const postcssPresetEnv = require('postcss-preset-env');
 const postcssViewportUnits = require('postcss-viewport-units');
 const cssnano = require('cssnano');
-const postcssIcssValues = require('postcss-icss-values');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -203,15 +203,15 @@ module.exports = {
                   plugins: () => [
                     require('postcss-flexbugs-fixes'),
                     // Autoprefixer already included in Cssnext({})
-                    // autoprefixer({
-                    //   browsers: [
-                    //     '>1%',
-                    //     'last 4 versions',
-                    //     'Firefox ESR',
-                    //     'not ie < 9', // React doesn't support IE8 anyway
-                    //   ],
-                    //   flexbox: 'no-2009',
-                    // }),
+                    autoprefixer({
+                      browsers: [
+                        '>1%',
+                        'last 4 versions',
+                        'Firefox ESR',
+                        'not ie < 9', // React doesn't support IE8 anyway
+                      ],
+                      flexbox: 'no-2009',
+                    }),
                     postcssAspectRatioMini({}),
                     postcssPxToViewport({ 
                       viewportWidth: 750, // (Number) The width of the viewport. 
@@ -225,7 +225,7 @@ module.exports = {
                     postcssWriteSvg({
                       utf8: false
                     }),
-                    postcssCssnext({}),
+                    postcssPresetEnv({stage: 2}),
                     postcssViewportUnits({}),
                     cssnano({
                       preset: "advanced", 
