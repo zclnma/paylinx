@@ -9,11 +9,13 @@ const Option = Select.Option;
 
 class RegistrationForm extends React.Component {
   state = {
+    submitting: false,
     confirmDirty: false,
     autoCompleteResult: [],
   };
 
   handleSubmit = (e) => {
+    this.setState({submitting: true});
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
@@ -29,13 +31,17 @@ class RegistrationForm extends React.Component {
         }
         axios.post('/api/email', data)  
           .then(res => {
+            this.setState({submitting: false});
             if (res.status === 400) {
               Promise.reject(res);
               return message.error('Something went wrong. Please try again later');
             }
             return message.success('Success')
           })
-          .catch(err => message.error('Something went wrong. Please try again later'))
+          .catch(err => {
+            this.setState({submitting: false});
+            message.error('Something went wrong. Please try again later');
+          })
       }
     });
   }
@@ -180,7 +186,7 @@ class RegistrationForm extends React.Component {
               )}
         </FormItem>
         <div style={{textAlign:'center'}}>
-          <Button type="primary" htmlType="submit">Submit</Button>
+          <Button loading={this.state.submitting} type="primary" htmlType="submit">Submit</Button>
         </div>
       </Form>
       </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import MediaQuery from 'react-responsive';
 
 import client1 from '../images/img_testimonial1.png';
-import client2 from '../images/img_testimonial2.png';
+import client2 from '../images/img_testimonial2a.png';
 import client3 from '../images/img_testimonial3.png';
 import client4 from '../images/img_testimonial4.png';
 
