@@ -25,8 +25,8 @@ export default () => {
             <div styleName="content">
               <div styleName="lato-title">Marketing Solutions</div>
               <div>
-              <div className="body">You can showcase your products through an in-app shop. Making simple and easy for customers to purchase your products through a “one-click-payment”, although they are back in China. Our marketing services gather the essentials to attract Chinese customers to your business.</div>
-              <div className="body">The best way to be known and have presence among Chinese customers is being visible in the number one Chinese social media app, WeChat. Paylinx provides the solution for the exposure, creating a WeChat Official account. Creating the account gives merchants the chance to advertise and promote their businesses in the Chinese social app. Boost your social media presence over 1 billion Chinese monthly active users. Having your brands’ image linked to a verified WeChat official account registered in your trading legal entities name, gives potential customers confidence. </div>
+              <div className="body">Our marketing services gather the essentials to attract Chinese customers to your business.The best way to be known and have presence among Chinese customers is being visible in the number one Chinese EcoSystem media app, WeChat. Paylinx provides the solution for the exposure, creating a WeChat Official account. Creating the account gives merchants the chance to advertise and promote their businesses in the Chinese social app.</div>
+              <div className="body">Boost your social media presence over 1 billion Chinese monthly active users. Having your brands’ image linked to a verified WeChat official account registered in your trading legal entities name, gives potential customers confidence. </div>
               <div className="body">
                 <ul>
                   <li>CRM</li>
