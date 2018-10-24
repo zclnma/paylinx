@@ -33,7 +33,7 @@ export default class footer extends Component {
                     <div styleName="lato-oversize">1300 03 12 83</div>
                 </div>
                 <div styleName="follow">
-                    <div style={{marginLeft:'15px'}}styleName="lato-subtitle">FOLLOW US ON</div>
+                    <div style={{marginLeft:'15px'}} styleName="lato-subtitle">FOLLOW US ON</div>
                     <div styleName="icons">
                         <span styleName="icon"> <Popover content={content}>
                             <img src={wechat} alt="" />
@@ -178,13 +178,15 @@ export default class footer extends Component {
             })}
             </MediaQuery>
             <div styleName="disclaimer">
+                <div styleName="copyright" className="body">Copyright © 2018 Paylinx Pty Ltd. All rights reserved. |</div>
+                <div style={{borderBottom:'1px solid gray'}}>
                 <Link 
                     to='/privacy-policy'
                     styleName="link"
-                    className="lato-ssubtitle">
+                    className="body">
                     Privacy Policy
                 </Link>
-                <div styleName="copyright" className="lato-ssubtitle">Copyright © 2018 Paylinx Pty Ltd. All rights reserved.</div>
+                </div>
             </div>
         </div>
       </div>

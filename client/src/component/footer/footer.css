@@ -5,6 +5,8 @@
     width: 100%;
     background-color: shark;
     padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .container {
@@ -28,11 +30,11 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: -5px;
 }
 
 .section-bottom{
-    margin-top: 15px;
+    margin-top: 0px;
     position: relative;
     display: flex;
 }
@@ -45,8 +47,10 @@
 
 .follow {
     position: relative;
-    margin-left: 150px;
-    width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 200px;
+    width: 250px;
 }
 
 .icons {
@@ -54,7 +58,7 @@
 }
 
 .icons img {
-    width: 50px;
+    width: 30px;
 }
 
 
@@ -105,20 +109,23 @@
 }
 
 .disclaimer {
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
+    display: flex;
 }
 
 .lato-oversize {
     composes: lato-oversize from global;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 400;
+    margin-top: -5px;
     color: iron;
 }
 
 .lato-subtitle{
     composes: lato-subtitle from global;
     color: iron;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 500px) {

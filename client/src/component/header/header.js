@@ -3,8 +3,6 @@ import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom';
 import {Menu, Dropdown} from 'antd';
 import MediaQuery from 'react-responsive';
-import LazyLoad from 'react-lazyload';
-
 import Modal from '../Modal/Modal';
 import Search from './searchBar/searchBar';
 import MenuList from '../menus';
