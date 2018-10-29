@@ -1,14 +1,14 @@
 .searchContainer {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
+    width: 600px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 40px;
 }
 
-.Latoh3 {
-    composes: Latoh3 from global;
-    font-weight: 600;
+.lato-subtitle {
+    composes: global lato-subtitle from global;
 }
 
-.SourceB {
-    composes: Sourcebody from global;
+.body {
+    composes: global body from global;
 }

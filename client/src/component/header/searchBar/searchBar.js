@@ -12,8 +12,8 @@ export default () => {
             {FAQfile.questions.map( (question, innerIndex) => {
                 return (
                     <div key={innerIndex}>
-                        <div styleName="Latoh3">{question.question}</div>
-                        <div styleName="SourceB">{question.answer}</div>
+                        <div styleName="lato-subtitle">{question.question}</div>
+                        <div styleName="body">{question.answer}</div>
                     </div>
                 )
             })}
@@ -21,7 +21,7 @@ export default () => {
     })
   return (
     <div styleName="searchContainer">
-        <Collapse accordion style={{width:'100%'}}>
+        <Collapse accordion style={{width:'600px'}}>
             {faq}
         </Collapse>
     </div>
