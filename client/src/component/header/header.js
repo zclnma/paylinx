@@ -71,7 +71,7 @@ class Header extends Component {
                         <div styleName="icon"> 
                             <Dropdown overlay={userMenu}>
                                 <img src={UserIcon} alt="" />
-                                </Dropdown>
+                            </Dropdown>
                         </div>
                         <div styleName="icon" onClick={this.showSearch}> 
                             <img src={SearchIcon} alt="" />
@@ -91,7 +91,7 @@ class Header extends Component {
                         <div styleName="icon"> 
                             <Dropdown overlay={userMenu}>
                                 <img src={UserIcon} alt="" />
-                                </Dropdown>
+                            </Dropdown>
                         </div>
                         <div styleName="icon" onClick={this.showSearch}> 
                             <img src={SearchIcon} alt="" />
