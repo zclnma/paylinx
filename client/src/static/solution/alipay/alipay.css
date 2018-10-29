@@ -2,12 +2,8 @@
 
 .container {
     text-align: center;
-    width: 100%;
+    width: 750px;
     padding: 20px;
-}
-
-.container img{
-    width: 80px;  
 }
 
 .content {
@@ -23,12 +19,12 @@
 
 .ali {
     margin-top: 40px;
-    width: 80%;
+    width: 600px;
     margin: auto;
 }
 
 .ali img{
-    width: 100%;
+    width: 600px;
     margin-bottom: 40px;
     height: auto;
 }
