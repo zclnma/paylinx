@@ -15,10 +15,21 @@
     text-align: justify;
     margin: auto;
 }
-.ali img{
+
+.ali-logo img{
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.ali {
     margin-top: 40px;
-    margin-bottom: 40px;
     width: 80%;
+    margin: auto;
+}
+
+.ali img{
+    width: 100%;
+    margin-bottom: 40px;
     height: auto;
 }
 

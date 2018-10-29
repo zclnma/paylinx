@@ -1,7 +1,6 @@
 .searchContainer {
     width: 600px;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin: auto;
     margin-top: 40px;
 }
 

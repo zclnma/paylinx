@@ -7,7 +7,7 @@ export default () => {
   return (
     <div styleName="container" id='alipay'>
         <span styleName="lato-title">Alipay Solutions</span>
-        <div style={{marginBottom: '20px'}}><img src={Alipay} alt="" /></div>
+        <div styleName="ali-logo"><img src={Alipay} alt="" /></div>
         <div styleName="content">
           <div className="body">Since debuting as a simple e-payment system, Alipay has transformed itself into a destination app (and website) in it’s own right. As the Chinese have fast become acustomed to transacting via their phones, with it’s huge built-in user base, Alipay continues to drive innovation in mobile payments.</div>
           <div className="body">Alipay and Alibaba are integral to each other’s success, and because of Alipay’s flexibility and many potential uses, in the longer term it is considered that Alipay will turn out to be the more important business.</div>

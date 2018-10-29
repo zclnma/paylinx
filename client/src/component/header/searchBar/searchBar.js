@@ -21,7 +21,7 @@ export default () => {
     })
   return (
     <div styleName="searchContainer">
-        <Collapse accordion style={{width:'600px'}}>
+        <Collapse accordion style={{width:'100%'}}>
             {faq}
         </Collapse>
     </div>
