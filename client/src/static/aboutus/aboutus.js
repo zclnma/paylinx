@@ -8,11 +8,18 @@ import Change from './images/icon_change.png';
 import Security from './images/icon_security.png';
 import Premium from './images/icon_premium.png';
 import {Layout} from 'antd';
+import {Helmet} from "react-helmet";
 
 const {Content} = Layout;
 
 export default () => {
   return (
+    <div>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Paylinx - About Us</title>
+        <link rel="canonical" href="http://www.paylinx.com.au/about-us" />
+    </Helmet>
     <Layout>
       <Header />
       <Content>
@@ -65,6 +72,6 @@ export default () => {
       </Content>
       <Footer />
     </Layout>
-
+  </div>
   )
 }

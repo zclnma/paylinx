@@ -10,6 +10,7 @@ import WechatPay from './images/logo_WeChat Pay.png';
 import Cards from './cards/cards';
 import Solutions from './solutions/solution';
 import Marketing from './marketing/marketing';
+import {Helmet} from "react-helmet";
 
 import './Home.css';
 import {Layout} from 'antd';
@@ -20,6 +21,12 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <div>
+          <Helmet>
+              <meta charSet="utf-8" />
+              <title>Paylinx - Home</title>
+              <link rel="canonical" href="http://www.paylinx.com.au/" />
+          </Helmet>
       <Layout>
         <Header />
         <Content>
@@ -53,6 +60,7 @@ export default class App extends React.Component {
         </Content>
         <Footer />
       </Layout>
+      </div>
     )
   }
 }

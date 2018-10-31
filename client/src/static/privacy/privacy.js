@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
-
+import {Helmet} from 'react-helmet';
 import {Layout} from 'antd';
 
 import './privacy.css';
@@ -11,6 +11,12 @@ const {Content} = Layout;
 
 export default function privacy() {
   return (
+    <div>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Paylinx - About Us</title>
+        <link rel="canonical" href="http://www.paylinx.com.au/privacy-policy" />
+    </Helmet>
     <Layout>
       <Header />
       <Content>
@@ -234,5 +240,6 @@ export default function privacy() {
       </Content>
       <Footer />
     </Layout>
+    </div>
   )
 }

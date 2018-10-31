@@ -6,11 +6,18 @@ import Banner from './banner/banner';
 import Form from './form/form';
 import Map from './map/map';
 import {Layout} from 'antd';
+import {Helmet} from 'react-helmet';
 
 const {Content} = Layout;
 
 export default () => {
   return (
+    <div>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Paylinx - Contact Us</title>
+        <link rel="canonical" href="http://www.paylinx.com.au/contact-us" />
+    </Helmet>
       <Layout>
         <Header />
         <Content >
@@ -25,5 +32,6 @@ export default () => {
         </Content>
         <Footer />
       </Layout>
+    </div>
   )
 }

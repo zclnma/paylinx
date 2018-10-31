@@ -6,11 +6,18 @@ import Wechat from './wechat/wechat';
 import Alipay from './alipay/alipay';
 import Tailor from './tailor/tailor';
 import {Layout} from 'antd';
+import {Helmet} from 'react-helmet';
 
 const {Content} = Layout;
 
 export default () => {
   return (
+    <div>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Paylinx - Solution</title>
+        <link rel="canonical" href="http://www.paylinx.com.au/solution" />
+    </Helmet>
     <Layout>
       <Header />
       <Content >
@@ -21,5 +28,6 @@ export default () => {
       </Content>
       <Footer />
     </Layout>
+    </div>
   )
 }
