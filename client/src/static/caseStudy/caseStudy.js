@@ -15,6 +15,7 @@ export default () => {
     <div>
     <Helmet>
         <meta charSet="utf-8" />
+        <meta name="Our Clients" content="Currently we have more than 3000 merchants in Australia that utilise our services, including WeChat Pay and Alipay. We provide access and marketing to our merchants utilising our 200+ media channels in China and in the Australian Chinese community." />
         <title>Paylinx - Our Clients</title>
         <link rel="canonical" href="http://www.paylinx.com.au/case-study" />
     </Helmet>

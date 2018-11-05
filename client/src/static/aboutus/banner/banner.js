@@ -8,7 +8,7 @@ export default () => {
             <div styleName="bannerInfo">
                 <div styleName="orange"></div>
                 <span className="lato-title">About Us</span>
-                <div styleName="body">Paylinx is an integrated mobile payment and marketing platform that connects Australian merchants and Chinese consumers. Mobile payment is the future of commerce, and Chinese consumers travelling abroad or, driving businesses and market growth globally.</div>
+                <div styleName="body">Paylinx is a FinTech company specialised in integrated mobile payments, marketing and media that connects Australian merchants and Chinese consumers. Mobile payment is the future of commerce, driving businesses and market growth globally. Paylinx is the WeChat Pay and Alipay service provider in Australia, the biggest mobile payment services.</div>
             </div>
     </div>
   )

@@ -17,6 +17,7 @@ export default () => {
     <div>
     <Helmet>
         <meta charSet="utf-8" />
+        <meta name="About Us" content="Paylinx is a FinTech company specialised in integrated mobile payments, marketing and media that connects Australian merchants and Chinese consumers. Mobile payment is the future of commerce, driving businesses and market growth globally. Paylinx is the WeChat Pay and Alipay service provider in Australia, the biggest mobile payment services." />
         <title>Paylinx - About Us</title>
         <link rel="canonical" href="http://www.paylinx.com.au/about-us" />
     </Helmet>

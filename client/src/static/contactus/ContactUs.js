@@ -15,6 +15,7 @@ export default () => {
     <div>
     <Helmet>
         <meta charSet="utf-8" />
+        <meta name="Contact Us" content="Speak to Paylinx today about how we can connect your business to the WeChat and Alipay ecosystems, and start attracting Chinsese consumers. " />
         <title>Paylinx - Contact Us</title>
         <link rel="canonical" href="http://www.paylinx.com.au/contact-us" />
     </Helmet>

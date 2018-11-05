@@ -24,6 +24,7 @@ export default class App extends React.Component {
       <div>
           <Helmet>
               <meta charSet="utf-8" />
+              <meta name="home" content="Paylinx - WeChat Pay, Alipay" />
               <title>Paylinx - Home</title>
               <link rel="canonical" href="http://www.paylinx.com.au/" />
           </Helmet>
