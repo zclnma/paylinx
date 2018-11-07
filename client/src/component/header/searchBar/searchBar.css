@@ -6,6 +6,7 @@
 
 .lato-subtitle {
     composes: global lato-subtitle from global;
+    color: black
 }
 
 .body {
