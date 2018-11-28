@@ -26,7 +26,7 @@ app.post('/api/email',(req,res) => {
 
     let mailOptions = {
         from: req.body.email, // sender address
-        to: 'mel@paylinx.com.au', // list of receivers
+        to: ['mel@paylinx.com.au','ander.p@paylinx.com.au'], // list of receivers
         subject: 'PayLinx Website Enquery', // Subject line
         text: `Hi PayLinx,
 
